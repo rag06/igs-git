@@ -26,7 +26,7 @@ foreach($category as $catrow){
                 </h3>
                 <div class="row">
                     <div class="col-md-12">
-                        <table class="table table-bordered" style="background-color: #E3F2FD;">
+                        <table class="table table-bordered" style="background-color:rgb(244, 218, 247);">
                             <tr>
                                 <td rowspan="4" style="width: 15%; text-align: center">
                                     <img class="img-responsive" src="<?php echo $productdetails[0]['product_Image']; ?>" style="height: 120px;" />

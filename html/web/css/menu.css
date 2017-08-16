@@ -725,8 +725,8 @@
   }
   .cd-dropdown-content > .has-children > a.is-active {
     /* hover effect for .cd-dropdown-content items with subnavigation */
-    box-shadow: inset 2px 0 0 #3e8f4b;
-    color: #3e8f4b;
+    box-shadow: inset 2px 0 0 #872a92;
+    color: #fff;
   }
   .cd-dropdown-content > .has-children > a.is-active::before, .cd-dropdown-content > .has-children > a.is-active::after {
     background: #3e8f4b;

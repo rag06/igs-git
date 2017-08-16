@@ -62,7 +62,7 @@
                             
                         </tbody>
                     </table>
-                    <a href="<?php echo base_url();?>products/products" class="btn btn-info">Continue Shopping</a>
+                    <a href="<?php echo base_url();?>products/products" class="btn btn-primary">Continue Shopping</a>
 					<?php if(sizeOf($cart)>0){?>
                     <a href="<?php echo base_url();?>shopping/checkout" class="btn btn-success">Check Out</a>
 					<?php } ?>

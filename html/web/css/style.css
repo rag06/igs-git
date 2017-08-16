@@ -138,7 +138,7 @@ ul.cd-dropdown-content li {
 .header-logo h1 a span,.footer-logo.header-logo h2 a span{
     font-family: 'Lovers Quarrel', cursive;
     font-size: 2em;
-    color:#062c77;
+    color:#872a92;
     vertical-align: sub;
 	margin-right: 3px;
 }
@@ -172,7 +172,7 @@ ul.cd-dropdown-content li {
     -moz-transition: 0.5s all;
 }
 .header-search input[type="search"]:focus {
-    border-color: #062c77;
+    border-color: #872a92;
 }
 .header-search .btn-default {
     border: none;
@@ -183,7 +183,7 @@ ul.cd-dropdown-content li {
     height: 50px;
     outline: none;
     box-shadow: none;
-    background: #062c77;
+    background: #872a92;
     padding: 0;
     border-radius: inherit;
     -webkit-appearance: none;
@@ -253,7 +253,7 @@ ul.cd-dropdown-content li {
 .header-three {
     border-bottom: 1px solid #eaeaea; 
    /*- background: url(../images/bg.png)#08bce4 no-repeat;---*/
-   background-color:#0F77AD;
+   background-color:#872a92;
     background-size: cover;  
 }
 /*-- //header-three --*/
@@ -284,7 +284,7 @@ ul.cd-dropdown-content li {
 /*-- menu --*/
 .cd-dropdown ul
 {
-    background-color:#0F77AD;
+    background-color:#872a92;
     }
  .cd-dropdown-content .has-children .cd-secondary-dropdown
 {
@@ -296,7 +296,7 @@ ul.cd-dropdown-content li {
     }
 /*-.cd-dropdown-content .has-children .cd-secondary-dropdown:hover
 {
-    background-color:#062c77;
+    background-color:#872a92;
     }---*/
 .cd-dropdown-content .has-children .cd-secondary-dropdown ul li
 {
@@ -548,7 +548,7 @@ h3.w3ls-title {
 }
 .w3ls-cart {
     display: block;
-    background: #062c77;
+    background: #872a92;
     color: #fff;
     font-size: 1em;
     text-align: center;
@@ -588,7 +588,7 @@ h3.w3ls-title {
 }
 .w3ls-add-grids h4 {
     font-size: 1.8em;
-    color: #062c77;
+    color: #872a92;
     letter-spacing: 2px;
     padding-top: 3em;
 	outline:none;
@@ -915,11 +915,11 @@ p {
     background: none;
 }
 .subscribe form:hover input[type="text"]{
-    border-color: #062c77;
+    border-color: #872a92;
 }
 .subscribe form:hover input[type="submit"] {
-    border-color: #062c77;
-    background: #062c77;
+    border-color: #872a92;
+    background: #872a92;
 	color:#fff;
 }
 /*-- //subscribe --*/
@@ -1094,7 +1094,7 @@ p {
     color: #fff;
 }
 .copy-right p a:hover{
-    color: #062c77;
+    color: #872a92;
 }
 /*-- //footer --*/
 /*-- slider-up-arrow --*/
@@ -1152,7 +1152,7 @@ p {
     left: 3%;
 }
 .agile-products:hover .new-tag:before {
-    border-top-color: #062c77;
+    border-top-color: #872a92;
 }
 /*-- products-right --*/
 .product-w3ls-right {
@@ -1256,7 +1256,7 @@ p {
 	bottom: 35%;
 }
 .agile-products:hover {
-    border-color: #062c77;
+    border-color: #872a92;
 }
 .w3ls-add-grids.w3agile-add-products {
     float: none;
@@ -1321,7 +1321,7 @@ input.item_quantity:hover{
 }
 .rsidebar h4,.related-row h4 {
     font-size: 1.1em;
-    color: #062c77;
+    color: #872a92;
     text-transform: uppercase;
     margin-bottom: 1em;
     font-family: 'Offside', cursive;
@@ -1601,7 +1601,7 @@ input#amount {
 	text-decoration:none;
 }
 .forgot a:hover{
-    color:#062c77;
+    color:#872a92;
 }
 .login-page h6 {
     font-size: 1.1em;
@@ -1609,7 +1609,7 @@ input#amount {
     margin: 2em 0 0;
 }
 .login-page h6 a {
-    color: #062c77;
+    color: #872a92;
     margin-left: 7px;
 }
 .login-page h6 a:hover {
@@ -1732,15 +1732,15 @@ h3.w3ls-title.w3ls-title1 {
     font-size: 1em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #062c77; 
-    border: 2px solid #062c77;
+    background: #872a92; 
+    border: 2px solid #872a92;
     -webkit-transition: 0.5s all; 
     -moz-transition: 0.5s all;
 	transition: 0.5s all;
 }
 .contact  input[type="submit"]:hover {
     background: none;
-    color: #062c77;
+    color: #872a92;
 }
 ::-webkit-input-placeholder {
 	color:#999 !important;
@@ -1893,7 +1893,7 @@ h3.w3ls-title.w3ls-title1 {
     font-family: 'Offside', cursive;
 }
 .services-grids:hover i.fa {
-    background: #062c77;
+    background: #872a92;
 }
 /*-- //services --*/
 /*-- values --*/
@@ -2012,13 +2012,13 @@ nav.sitemap-tabs.affix div#myNavbar {
 h3.w3sitemap-title {
     font-family: 'Offside', cursive;
     font-size: 1.5em;
-	color: #062c77; 
+	color: #872a92; 
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 0.5em;
 }  
 h3.w3sitemap-title i.fa {
     font-size: 1.2em;
-    color: #062c77;
+    color: #872a92;
     border: 1px solid;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -2071,7 +2071,7 @@ h5.sitemap-text-title {
 .single-top-right h3 {
     text-transform: capitalize;
     font-size: 2em;
-    color: #062c77;
+    color: #872a92;
     font-family: 'Offside', cursive;
 	margin-bottom: .3em;
 } 
@@ -2115,7 +2115,7 @@ h5.sitemap-text-title {
     font-family: 'Offside', cursive;
 }
 .single-price.price ul li a {
-    color: #062c77;
+    color: #872a92;
 }
 .single-price.price ul li a:hover{
     color: #999;
@@ -2130,7 +2130,7 @@ p.single-price-text {
     width: 28%; 
     font-weight: 300;
     padding: 0.6em 0; 
-	border-color: #062c77;
+	border-color: #872a92;
 	-webkit-transition:.5s all;
 	-moz-transition:.5s all;
 	-o-transition:.5s all;
@@ -2305,7 +2305,7 @@ p.single-price-text {
     margin-left: -1em;
 }
 p.sbmincart-empty-text {
-    color: #062c77;
+    color: #872a92;
     font-weight: 500;
 }
 #PPsbmincart .sbmincart-subtotal {
@@ -2326,10 +2326,10 @@ p.sbmincart-empty-text {
 } 
 /* Track */
 #PPsbmincart form  ul::-webkit-scrollbar-track { 
-	-webkit-box-shadow: inset 0 0 6px #062c77; 
-	-moz-box-shadow: inset 0 0 6px #062c77;
-	-o-box-shadow: inset 0 0 6px #062c77;
-	-ms-box-shadow: inset 0 0 6px #062c77; 
+	-webkit-box-shadow: inset 0 0 6px #872a92; 
+	-moz-box-shadow: inset 0 0 6px #872a92;
+	-o-box-shadow: inset 0 0 6px #872a92;
+	-ms-box-shadow: inset 0 0 6px #872a92; 
 	box-shadow: inset 0 0 6px #999; 
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -2344,12 +2344,12 @@ p.sbmincart-empty-text {
 	-o-border-radius: 10px;
 	-ms-border-radius: 10px;
     border-radius: 10px;
-    background: #062c77; 
-	-moz-box-shadow: inset 0 0 6px #062c77;
-	-o-box-shadow: inset 0 0 6px #062c77; 
-	-ms-box-shadow: inset 0 0 6px #062c77; 
-    -webkit-box-shadow: inset 0 0 6px #062c77;
-	box-shadow: inset 0 0 6px #062c77; 	
+    background: #872a92; 
+	-moz-box-shadow: inset 0 0 6px #872a92;
+	-o-box-shadow: inset 0 0 6px #872a92; 
+	-ms-box-shadow: inset 0 0 6px #872a92; 
+    -webkit-box-shadow: inset 0 0 6px #872a92;
+	box-shadow: inset 0 0 6px #872a92; 	
 } 
 /*-- //cart-css --*/ 
 /*-- index-modal --*/ 
@@ -2363,7 +2363,7 @@ p.sbmincart-empty-text {
     outline: none;
 }
 .agileits-modal h4 {
-    color: #062c77;
+    color: #872a92;
     font-family: 'Offside', cursive; 
 	 font-size: 1.8em;
 } 
@@ -4220,7 +4220,7 @@ h3.w3ls-title.w3ls-title1 {
     padding: 15px 18px;
 }
 .block-text a {
- color: #062c77;
+ color: #872a92;
     font-size: 25px;
     font-weight: bold;
     line-height: 21px;
@@ -4283,3 +4283,48 @@ h3.w3ls-title.w3ls-title1 {
 }
 /*-------------------------------------------------------------------------------------------------*/
 
+
+/*custom*/
+.panel-primary {
+    border-color: #872a92;
+}
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #872a92;
+    border-color: #872a92;
+}
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color: #872a92;
+    border-color: #872a92;
+}
+
+.btn-primary ,.btn-primary:hover,.btn-primary:visited,.btn-primary:focus{
+    color: #fff;
+    background-color: #872a92;
+    border-color: #872a92;
+}
+
+.glry-w3agile-grids .view-caption h5 {
+	background-color: #872a92;
+}
+.new-tag:before {
+    border-top: 60px solid #872a92;
+    border-right: 60px solid transparent;
+}
+.w3ls-header-right ul li a.dropdown-toggle:hover, li.dropdown.head-dpdn.open a.dropdown-toggle, .my-account a:hover, .my-account a:hover i.fa {
+    color: #872a92;
+    text-decoration: none;
+}
+.dropdown-menu > li > a:hover {
+    background-color: #872a92;
+	color:#fff;
+}
+@media only screen and (min-width: 1024px) {
+.cd-dropdown-content > .has-children > a.is-active {
+    /* hover effect for .cd-dropdown-content items with subnavigation */
+    box-shadow: inset 2px 0 0 #872a92;
+    color: #fff;
+  }
+}
+/*custom end*/

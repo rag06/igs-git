@@ -182,7 +182,7 @@
                     </div>
                     <div class="header-cart">
                         <div class="">
-                            <a href="<?php echo base_url();?>/shopping/cart" class="btn btn-success btn-circle btn-xl btn-circle"><i class="fa fa-cart-arrow-down"
+                            <a href="<?php echo base_url();?>/shopping/cart" class="btn btn-primary btn-circle btn-xl btn-circle"><i class="fa fa-cart-arrow-down"
                                 aria-hidden="true"></i>
                                 <span id="LblCartCount"><?php $cart = $this->cart->contents(); echo sizeOf($cart);?></span>
                             </a>
