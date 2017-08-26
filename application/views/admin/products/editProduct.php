@@ -105,29 +105,29 @@
 								  <textarea class="form-control" id="description" name="description" ><?php echo $result[0]['product_Description'];?></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="benefits"> Benefits</label>
+								  <label for="benefits">  Action Mechainism</label>
 								  <textarea class="form-control" id="benefits" name="benefits" ><?php echo $result[0]['product_Benefits'];?></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="working"> Working</label>
+								  <label for="working"> Benefits</label>
 								  <textarea class="form-control" id="working" name="working" ><?php echo $result[0]['product_Working'];?></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="dosage"> Dosage</label>
+								  <label for="dosage">  Dosage And Storage</label>
 								  <textarea class="form-control" id="dosage" name="dosage" ><?php echo $result[0]['product_Dosage'];?></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="precaution"> Precaution</label>
+								  <label for="precaution">  Points To Be Noted While Consuming</label>
 								  <textarea class="form-control" id="precaution" name="precaution" ><?php echo $result[0]['product_Precaution'];?></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="sideEffects"> SideEffects</label>
+								  <label for="sideEffects"> Side Effects </label>
 								  <textarea class="form-control" id="sideEffects" name="sideEffects" ><?php echo $result[0]['product_SideEffects'];?></textarea>
 								</div>
-								<div class="form-group">
+								<!--div class="form-group">
 								  <label for="warnings"> Warnings</label>
 								  <textarea class="form-control" id="warnings" name="warnings" ><?php echo $result[0]['product_Warnings'];?></textarea>
-								</div>
+								</div-->
 							
 							
 								<a href="<?php echo base_url() ;?>/admin/products/products" class="btn btn-success btn-sm">Cancel</a>

@@ -90,29 +90,29 @@
 								  <textarea class="form-control" id="description" name="description" ></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="benefits"> Benefits</label>
+								  <label for="benefits"> Action Mechainism</label>
 								  <textarea class="form-control" id="benefits" name="benefits" ></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="working"> Working</label>
+								  <label for="working"> Benefits </label>
 								  <textarea class="form-control" id="working" name="working" ></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="dosage"> Dosage</label>
+								  <label for="dosage"> Dosage And Storage</label>
 								  <textarea class="form-control" id="dosage" name="dosage" ></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="precaution"> Precaution</label>
+								  <label for="precaution"> Points To Be Noted While Consuming </label>
 								  <textarea class="form-control" id="precaution" name="precaution" ></textarea>
 								</div>
 								<div class="form-group">
-								  <label for="sideEffects"> SideEffects</label>
+								  <label for="sideEffects"> Side Effects </label>
 								  <textarea class="form-control" id="sideEffects" name="sideEffects" ></textarea>
 								</div>
-								<div class="form-group">
+								<!--div class="form-group">
 								  <label for="warnings"> Warnings</label>
 								  <textarea class="form-control" id="warnings" name="warnings" ></textarea>
-								</div>
+								</div-->
 							
 								<a href="<?php echo base_url() ;?>/admin/products/products" class="btn btn-success btn-sm">Cancel</a>
 								<button type="submit" class="btn btn-primary pull-right">Add Product </button>

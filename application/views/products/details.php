@@ -115,7 +115,7 @@ foreach($category as $catrow){
                                                 <div class="panel-heading" role="tab" id="headingOne">
                                                     <h4 class="panel-title">
                                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
-                                                            aria-controls="collapseOne" class="collapsed">Benefits </a>
+                                                            aria-controls="collapseOne" class="collapsed">Action Mechainism Of <?php echo $productdetails[0]['product_Name']; ?> </a>
                                                     </h4>
                                                 </div>
                                                 <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne"
@@ -125,7 +125,7 @@ foreach($category as $catrow){
 															 if(!empty($productdetails[0]['product_Benefits']))
 																	echo $productdetails[0]['product_Benefits'];
 															else{
-																echo '<h4>No Benefits Inserted</h4>';
+																echo '<h4>NA</h4>';
 															}
 															 ?>
                                                                 
@@ -136,7 +136,7 @@ foreach($category as $catrow){
                                                 <div class="panel-heading" role="tab" id="headingTwo">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                                                            aria-expanded="false" aria-controls="collapseTwo">Working </a>
+                                                            aria-expanded="false" aria-controls="collapseTwo">Benefits of <?php echo $productdetails[0]['product_Name']; ?></a>
                                                     </h4>
                                                 </div>
                                                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
@@ -147,7 +147,7 @@ foreach($category as $catrow){
 															 if(!empty($productdetails[0]['product_Working']))
 																	echo $productdetails[0]['product_Working'];
 															else{
-																echo '<h4>No Benefits Inserted</h4>';
+																echo '<h4>NA</h4>';
 															}
 															 ?>
                                                     </div>
@@ -157,7 +157,7 @@ foreach($category as $catrow){
                                                 <div class="panel-heading" role="tab" id="headingThree">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
-                                                            aria-expanded="false" aria-controls="collapseThree">Dosage </a>
+                                                            aria-expanded="false" aria-controls="collapseThree">Dosage And Storage Of <?php echo $productdetails[0]['product_Name']; ?> </a>
                                                     </h4>
                                                 </div>
                                                 <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"
@@ -168,7 +168,7 @@ foreach($category as $catrow){
 															 if(!empty($productdetails[0]['product_Dosage']))
 																	echo $productdetails[0]['product_Dosage'];
 															else{
-																echo '<h4>No Benefits Inserted</h4>';
+																echo '<h4>NA</h4>';
 															}
 															 ?>
                                                     </div>
@@ -178,7 +178,7 @@ foreach($category as $catrow){
                                                 <div class="panel-heading" role="tab" id="Heading4">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4"
-                                                            aria-expanded="false" aria-controls="collapseThree">Precautions </a>
+                                                            aria-expanded="false" aria-controls="collapseThree">Points To Be Noted While Consuming <?php echo $productdetails[0]['product_Name']; ?> </a>
                                                     </h4>
                                                 </div>
                                                 <div id="collapse4" class="collapse" role="tabpanel" aria-labelledby="headingThree"
@@ -189,7 +189,7 @@ foreach($category as $catrow){
 															 if(!empty($productdetails[0]['product_Precaution']))
 																	echo $productdetails[0]['product_Precaution'];
 															else{
-																echo '<h4>No Precaution Inserted</h4>';
+																echo '<h4>NA</h4>';
 															}
 															 ?>
                                                     </div>
@@ -199,7 +199,7 @@ foreach($category as $catrow){
                                                 <div class="panel-heading" role="tab" id="HeadingFive">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive"
-                                                            aria-expanded="false" aria-controls="collapseThree">Side Effects </a>
+                                                            aria-expanded="false" aria-controls="collapseThree">Side Effects Of <?php echo $productdetails[0]['product_Name']; ?> </a>
                                                     </h4>
                                                 </div>
                                                 <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingThree"
@@ -210,13 +210,13 @@ foreach($category as $catrow){
 															 if(!empty($productdetails[0]['product_SideEffects']))
 																	echo $productdetails[0]['product_SideEffects'];
 															else{
-																echo '<h4>No Side Effects Inserted</h4>';
+																echo '<h4>NA</h4>';
 															}
 															 ?>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="panel panel-collapse panel-primary">
+                                            <!--div class="panel panel-collapse panel-primary">
                                                 <div class="panel-heading" role="tab" id="Heading6">
                                                     <h4 class="panel-title">
                                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6"
@@ -231,12 +231,12 @@ foreach($category as $catrow){
 															 if(!empty($productdetails[0]['product_Warnings']))
 																	echo $productdetails[0]['product_Warnings'];
 															else{
-																echo '<h4>No Warnings Inserted</h4>';
+																echo '<h4>NA</h4>';
 															}
 															 ?>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div-->
                                         </div>
                                     </div>
                                 </div>

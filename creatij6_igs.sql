@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 26, 2017 at 04:39 AM
+-- Generation Time: Aug 26, 2017 at 09:33 AM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -216,20 +216,23 @@ CREATE TABLE IF NOT EXISTS `orderstatus` (
   `orderStatus_ID` int(11) NOT NULL AUTO_INCREMENT,
   `orderStatus_Name` varchar(250) NOT NULL,
   PRIMARY KEY (`orderStatus_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `orderstatus`
 --
 
 INSERT INTO `orderstatus` (`orderStatus_ID`, `orderStatus_Name`) VALUES
-(1, 'Awaiting Approval'),
-(2, 'Approved'),
-(3, 'Rejected'),
-(4, 'Partially Completed'),
-(5, 'Completed'),
-(6, 'Payment Received'),
-(7, 'Cancelled');
+(1, 'In Transit'),
+(2, 'Arrived at facility'),
+(3, 'Inbound into Customs'),
+(4, 'Held in Customs'),
+(5, 'Cleared Customs'),
+(6, 'Reaching Destination'),
+(7, 'Unable to Deliver'),
+(8, 'Delivered'),
+(9, 'Notice Left'),
+(10, 'Available for pick up');
 
 -- --------------------------------------------------------
 

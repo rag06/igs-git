@@ -54,7 +54,6 @@ class Products extends CI_Controller {
 				'product_Dosage' => $this->input->post('dosage'),
 				'product_Precaution' => $this->input->post('precaution'),
 				'product_SideEffects' => $this->input->post('sideEffects'),
-				'product_Warnings' => $this->input->post('warnings'),
 				'product_Status' =>$this->input->post('status'),
 				'product_Featured' => $this->input->post('feature')
 				);
@@ -88,7 +87,6 @@ class Products extends CI_Controller {
 				'product_Dosage' => $this->input->post('dosage'),
 				'product_Precaution' => $this->input->post('precaution'),
 				'product_SideEffects' => $this->input->post('sideEffects'),
-				'product_Warnings' => $this->input->post('warnings'),
 				'product_Status' =>$this->input->post('status'),
 				'product_Featured' => $this->input->post('feature')
 				);
