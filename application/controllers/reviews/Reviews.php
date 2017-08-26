@@ -1,8 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
-
+class Reviews extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 
@@ -17,18 +16,26 @@ class Home extends CI_Controller {
 
 		// Load database
 		$this->load->model('Product_Model');
+		$this->load->model('Feedback_Model');
 		}
-	
+		
 	public function index()
-	{	
+	{
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
-		$this->load->view('home/index',$data);
+		$data['reviews'] = $this->Feedback_Model->listWebFeedback();
+		
+		$this->load->view('reviews/index',$data);
 	}
-	public function searchResults()
-	{	
-		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['products'] = $this->Product_Model->listWebProducts();
-		$this->load->view('home/search',$data);
-	}
+	public function addFeedback() {
+				$data = array(
+				'feedback_Text' => $this->input->post('text'),
+				'feedback_By' => $this->session->userdata['front_logged_in']['front_id'],
+				'feedback_Status' => 0
+				);
+				
+				$result = $this->Feedback_Model->addFeedback($data);
+				redirect('reviews/reviews');
+	}		
 }
+

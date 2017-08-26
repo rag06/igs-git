@@ -4327,4 +4327,17 @@ h3.w3ls-title.w3ls-title1 {
     color: #fff;
   }
 }
+
+
+.cd-secondary-dropdown{
+	background:#872a92;
+}
+
+@media only screen and (min-width: 1024px){
+.cd-dropdown-content .cd-dropdown-icons > li, .cd-dropdown-content .cd-secondary-dropdown > li {
+    width: 100%;  
+}
+
+}
 /*custom end*/
+

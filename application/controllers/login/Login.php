@@ -29,7 +29,6 @@ class Login extends CI_Controller {
 		}
 		$data['isregister']='N';
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('login/index',$data);
@@ -41,7 +40,6 @@ class Login extends CI_Controller {
 			redirect('home/home/');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('login/forgotPass',$data);
@@ -54,7 +52,6 @@ class Login extends CI_Controller {
 		}
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->form_validation->set_rules('email', 'Email Id', 'trim|required|valid_email');
@@ -97,7 +94,6 @@ class Login extends CI_Controller {
 	{
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		$data['isregister']='N';
 		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
@@ -158,7 +154,6 @@ class Login extends CI_Controller {
 			redirect('home/home/');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('login/register',$data);
@@ -168,7 +163,6 @@ class Login extends CI_Controller {
 	{
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->form_validation->set_rules('firstname', 'First Name', 'trim|required');
@@ -227,7 +221,6 @@ class Login extends CI_Controller {
 			redirect('login/login/index');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('login/changePassword',$data);
@@ -239,7 +232,6 @@ class Login extends CI_Controller {
 		}
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->form_validation->set_rules('password', 'password', 'trim|required');

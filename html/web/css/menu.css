@@ -572,7 +572,7 @@
     width: calc(100% - 60px);
   }
    .cd-dropdown-content .cd-dropdown-icons > li, .cd-dropdown-content .cd-secondary-dropdown > li {
-    width: 33%;
+    width: 100%;/*33*/
     float: left;
   }
   .cd-dropdown-content .cd-secondary-dropdown {

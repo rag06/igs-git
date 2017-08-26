@@ -31,10 +31,10 @@
                 <li><a href="<?php echo base_url() ;?>/admin/products/products/addProduct">Add Product</a></li>
                 <li><a href="<?php echo base_url() ;?>/admin/products/products">Manage Products</a></li>
                 <li><a href="<?php echo base_url() ;?>/admin/products/products/productCategory">Product Category</a></li>
-                <li><a href="<?php echo base_url() ;?>/admin/products/products/productSubCategory">Product Sub Category</a></li>
               </ul>
             </li>
             <!--li><a href="<?php echo base_url() ;?>/admin/subcribers/subcribers"><i class="fa fa-link"></i> <span>Subcribers</span></a></li-->
+            <li><a href="<?php echo base_url() ;?>/admin/feedback/feedback"><i class="fa fa-link"></i> <span>Reviews</span></a></li>
             
 			 <li class="treeview">
               <a href="#"><i class="fa fa-link"></i> <span>Customers Management</span> <i class="fa fa-angle-left pull-right"></i></a>

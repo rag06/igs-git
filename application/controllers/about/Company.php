@@ -23,7 +23,6 @@ class Company extends CI_Controller {
 	{
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		$data['webpage'] = $this->Webpage_Model->getPage(7);
 		

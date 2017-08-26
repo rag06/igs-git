@@ -21,7 +21,6 @@ class Products extends CI_Controller {
 	public function index()
 	{
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('products/index',$data);
@@ -29,7 +28,6 @@ class Products extends CI_Controller {
 	public function details($id )
 	{
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		$data['productdetails'] = $this->Product_Model->getProduct($id);
 		$data['packinfo'] = $this->Product_Model->getInfoByProduct($id);

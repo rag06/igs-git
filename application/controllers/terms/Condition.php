@@ -16,11 +16,14 @@ class Condition extends CI_Controller {
 
 		// Load database
 		$this->load->model('Webpage_Model');
+		$this->load->model('Product_Model');
 		}
 		
 	public function index()
 	{
 		$data['webpage'] = $this->Webpage_Model->getPage(2);
+		$data['category'] = $this->Product_Model->listWebProductCategory();
+		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('terms/index',$data);
 	}

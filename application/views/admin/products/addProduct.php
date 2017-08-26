@@ -55,7 +55,7 @@
 								  <label for="title">Product Category</label>
 								   <select class="form-control" name="category" id="category" required>
 									<?php foreach($result as $row){
-												echo'<option value="'.$row->pSCtg_ID.'"> '.$row->pCtg_Name.'->'.$row->pSCtg_Name.'</option>';
+												echo'<option value="'.$row->pCtg_ID.'"> '.$row->pCtg_Name.'</option>';
 									}?>
 								  </select>
 								</div>
@@ -79,6 +79,10 @@
 												echo'<option value="0">Not Featured</option>
 													<option value="1" >Featured</option>';?>
 								  </select>
+								</div>
+								<div class="form-group">
+								  <label for="tagline">Product Tagline</label>
+								  <input type="text" class="form-control" id="tagline" name="tagline" placeholder="Enter Product Tagline" required>
 								</div>
 								
 								<div class="form-group">

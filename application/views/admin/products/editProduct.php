@@ -56,10 +56,10 @@
 								  <label for="title">Product Category</label>
 								   <select class="form-control" name="category" id="category" required>
 									<?php foreach($category['result'] as $row){
-												if($result[0]['product_SubCtg']==$row->pSCtg_ID)
-												echo'<option value="'.$row->pSCtg_ID.'" selected> '.$row->pCtg_Name.'->'.$row->pSCtg_Name.'</option>';
+												if($result[0]['product_Ctg']==$row->pCtg_ID)
+												echo'<option value="'.$row->pCtg_ID.'" selected> '.$row->pCtg_Name.'</option>';
 												else
-												echo'<option value="'.$row->pSCtg_ID.'"> '.$row->pCtg_Name.'->'.$row->pSCtg_Name.'</option>';
+												echo'<option value="'.$row->pCtg_ID.'"> '.$row->pCtg_Name.'</option>';
 									}?>
 								  </select>
 								</div>
@@ -96,7 +96,10 @@
 									?>
 								  </select>
 								</div>
-								
+								<div class="form-group">
+								  <label for="tagline">Product Tagline</label>
+								  <input type="text" class="form-control" id="tagline" name="tagline" placeholder="Enter Product Tagline" value="<?php echo $result[0]['product_tagline'];?>" required>
+								</div>
 								<div class="form-group">
 								  <label for="description">Description</label>
 								  <textarea class="form-control" id="description" name="description" ><?php echo $result[0]['product_Description'];?></textarea>

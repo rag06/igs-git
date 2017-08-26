@@ -27,7 +27,6 @@ class Prescription  extends CI_Controller {
 		}
 		$data['uploads'] = $this->Customers_Model->getUploadsByUser($this->session->userdata['front_logged_in']['front_id']);
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('upload/index',$data);
@@ -37,7 +36,6 @@ class Prescription  extends CI_Controller {
 		
 		$data['uploads'] = $this->Customers_Model->getUploadsByUser($this->session->userdata['front_logged_in']['front_id']);
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		if(isset($_FILES['pdfupload'])){
 			 if($_FILES['pdfupload']['size'] != 0){

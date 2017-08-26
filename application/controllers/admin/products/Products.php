@@ -31,7 +31,7 @@ class Products extends CI_Controller {
 	public function addProduct()
 	{
 		if(isset($this->session->userdata['logged_in'])){
-			$result= $this->Product_Model->listProductSubCategory();
+			$result= $this->Product_Model->listProductCategory();
 			$this->load->view('admin/products/addProduct',$result);
 		}else{
 			redirect('admin/login/login');
@@ -40,16 +40,14 @@ class Products extends CI_Controller {
 	}
 	public function insertProduct()
 	{
-				$subctgdetail=$this->Product_Model->getProductSubCategory($this->input->post('category'));
-				$ctg= $subctgdetail[0]['pSCtg_Category'];
 				$data = array(
 				'product_Name' => $this->input->post('name'),
 				'product_Strength' => $this->input->post('strength'),
 				'product_BrandName' => $this->input->post('brand'),
 				'product_unitPrice' => $this->input->post('price'),
 				'product_Image' => $this->input->post('images'),
-				'product_Ctg' => $ctg,
-				'product_SubCtg' => $this->input->post('category'),
+				'product_Ctg' =>  $this->input->post('category'),
+				'product_tagline' =>  $this->input->post('tagline'),
 				'product_Description' => $this->input->post('description'),
 				'product_Benefits' => $this->input->post('benefits'),
 				'product_Working' => $this->input->post('working'),
@@ -67,7 +65,7 @@ class Products extends CI_Controller {
 				}
 				 else {
 					$data = array(
-						'error_message' => 'Error in creating blog'
+						'error_message' => 'Error in creating product'
 					);
 					$this->load->view('admin/products/addProduct', $data);
 				}
@@ -75,9 +73,6 @@ class Products extends CI_Controller {
 	}
 	public function updateProduct()
 	{
-				
-				$subctgdetail=$this->Product_Model->getProductSubCategory($this->input->post('category'));
-				$ctg= $subctgdetail[0]['pSCtg_Category'];
 				$data = array(
 				'product_ID' => $this->input->post('pId'),
 				'product_Name' => $this->input->post('name'),
@@ -85,8 +80,8 @@ class Products extends CI_Controller {
 				'product_BrandName' => $this->input->post('brand'),
 				'product_unitPrice' => $this->input->post('price'),
 				'product_Image' => $this->input->post('images'),
-				'product_Ctg' => $ctg,
-				'product_SubCtg' => $this->input->post('category'),
+				'product_Ctg' => $this->input->post('category'),
+				'product_tagline' =>  $this->input->post('tagline'),
 				'product_Description' => $this->input->post('description'),
 				'product_Benefits' => $this->input->post('benefits'),
 				'product_Working' => $this->input->post('working'),
@@ -125,7 +120,7 @@ class Products extends CI_Controller {
 							redirect('admin/login/index');
 						}
 						$data['result'] = $this->Product_Model->getProduct($id);
-						$data['category'] = $this->Product_Model->listProductSubCategory();
+						$data['category'] = $this->Product_Model->listProductCategory();
 						$this->load->view('admin/products/editProduct', $data);
 	}
 	
@@ -202,86 +197,6 @@ class Products extends CI_Controller {
 	public function getProductCategory()
 	{			$id =$this->input->post('categoryId');
 				$data = $this->Product_Model->getProductCategory($id);
-				$result=json_encode($data);
-				echo $result;
-	}
-	//sub category start
-	public function productSubCategory()
-	{
-		if(!isset($this->session->userdata['logged_in'])){
-			redirect('admin/login/index');
-		}
-		$data['result']= $this->Product_Model->listProductSubCategory();
-		$data['category']= $this->Product_Model->listProductCategory();
-			$this->load->view('admin/products/subcategory',$data);
-	}
-	
-	public function addProductSubCategory() {
-		$this->form_validation->set_rules('category', 'category', 'trim|required');
-		$this->form_validation->set_rules('status', 'status', 'trim|required');
-
-		if ($this->form_validation->run() == FALSE) {
-		
-			redirect('admin/products/products/productSubCategory');
-		
-		} else {
-				$data = array(
-				'pSCtg_Category' => $this->input->post('parentctg'),
-				'pSCtg_Name' => $this->input->post('category'),
-				'pSCtg_Status' => $this->input->post('status')
-				);
-				
-				$result = $this->Product_Model->addProductSubCategory($data);
-				if ($result == TRUE) {
-					redirect('admin/products/products/productSubCategory');
-				}
-				 else {
-					$data = array(
-						'error_message' => 'Error in adding category'
-					);
-					$this->load->view('admin/products/subcategory', $data);
-				}
-		}
-	}
-	public function deleteProductSubCategory() {
-				$id =$this->input->post('categoryId');
-				$result = $this->Product_Model->deleteProductSubCategory($id);
-				if ($result == TRUE) {
-					redirect('admin/products/products/productSubCategory');
-				}
-				 else {
-					$data = array(
-						'error_message' => 'Error in deleting category'
-					);
-					$this->load->view('admin/products/subcategory', $data);
-				}
-		
-	}
-	
-	public function updateProductSubCategory() {
-				$id =$this->input->post('editCategoryId');
-				$data = array(
-				'pSCtg_Name' => $this->input->post('editCategoryName'),
-				'pSCtg_Category' => $this->input->post('editparentctg'),
-				'pSCtg_Status' => $this->input->post('editStatus')
-				);
-				
-				$result = $this->Product_Model->updateProductSubCategory($id,$data);
-				if ($result == TRUE) {
-					redirect('admin/products/products/productSubCategory');
-				}
-				 else {
-					$data = array(
-						'error_message' => 'Error in updating category'
-					);
-					$this->load->view('admin/products/subcategory', $data);
-				}
-		
-	}
-	
-	public function getProductSubCategory()
-	{			$id =$this->input->post('categoryId');
-				$data = $this->Product_Model->getProductSubCategory($id);
 				$result=json_encode($data);
 				echo $result;
 	}

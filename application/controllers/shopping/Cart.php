@@ -21,7 +21,6 @@ class Cart extends CI_Controller {
 	public function index()
 	{
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('cart/index',$data);

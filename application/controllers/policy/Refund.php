@@ -23,7 +23,6 @@ class Refund extends CI_Controller {
 	{
 		$data['webpage'] = $this->Webpage_Model->getPage(4);
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 			
 		$this->load->view('policy/refund',$data);

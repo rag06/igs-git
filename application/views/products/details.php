@@ -1,12 +1,6 @@
 <?php $this->load->view('common/header.php');?>
 <?php
-$subcatgname="NA";
 $catgname="NA";
-foreach($subcategory['result'] as $subrow){ 
-	if($subrow->pSCtg_ID == $productdetails[0]['product_SubCtg']){
-		$subcatgname=$subrow->pSCtg_Name;
-	}
- }
 foreach($category as $catrow){ 
 	if($catrow->pCtg_ID == $productdetails[0]['product_Ctg']){
 		$catgname=$catrow->pCtg_Name;
@@ -26,6 +20,10 @@ foreach($category as $catrow){
                 </h3>
                 <div class="row">
                     <div class="col-md-12">
+						<div style="color:#872a92;font-size:18px;">
+						<?php echo $productdetails[0]['product_tagline']; ?>
+						</div>
+						<br/>
                         <table class="table table-bordered" style="background-color:rgb(244, 218, 247);">
                             <tr>
                                 <td rowspan="4" style="width: 15%; text-align: center">
@@ -36,14 +34,6 @@ foreach($category as $catrow){
                                 </td>
                                 <td>
                                     <span ><?php echo $catgname; ?></span><br />
-                                </td>
-                            </tr>
-                            <tr style="width: 20%;">
-                                <td>
-                                    <b>Sub Category </b>
-                                </td>
-                                <td>
-                                    <span><?php echo $subcatgname; ?></span><br />
                                 </td>
                             </tr>
                             <tr style="width: 20%;">

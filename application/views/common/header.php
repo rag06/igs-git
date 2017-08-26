@@ -21,6 +21,7 @@
     <!-- //Custom Theme files -->
     <!-- font-awesome icons -->
     <link href="<?php echo base_url(); ?>html/web/css/font-awesome.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>html/web/css/comment.css" rel="stylesheet" />
     <!-- //font-awesome icons -->
     <!-- js -->
     <script src="<?php echo base_url(); ?>html/web/js/jquery-2.2.3.min.js" type="text/javascript"></script>
@@ -212,56 +213,31 @@
 									<a href="#"><?php echo $ctgrow->pCtg_Name;?></a>
 									<ul class="cd-secondary-dropdown is-hidden">
 										<li class="go-back"><a href="#">Menu</a></li>
-										<?php 
-										$tempsubctg=[];
-										foreach($subcategory['result'] as $tmpsubrow){
-											if($tmpsubrow->pSCtg_Category  == $ctgrow->pCtg_ID){
-												array_push($tempsubctg,$tmpsubrow);
-											}
-										}
-										if(sizeof($tempsubctg)>0){
-											foreach($tempsubctg as $subrow){
-												
-												if($subrow->pSCtg_Category  == $ctgrow->pCtg_ID){
-													$isSubCtgPresent=true;
-										?>
 										<li class="has-children">
-											<h4><?php echo $subrow->pSCtg_Name;?></h4>
-                                            <ul class="">
-												<li class="go-back"><a href="#">Menu</a></li>
+											<h4><?php echo $ctgrow->pCtg_Name;?></h4>
+											<ul>
 												<?php 
 												$tempproduct=[];
 													foreach($products['result'] as $tempproductrow){
-														if($tempproductrow->product_SubCtg  == $subrow->pSCtg_ID ){
+														if($tempproductrow->product_Ctg  == $ctgrow->pCtg_ID ){
 															array_push($tempproduct,$tempproductrow);
 														}
 													}
 													if(sizeof($tempproduct)>0){
 													foreach($tempproduct as $productrow){
-														if($productrow->product_SubCtg  == $subrow->pSCtg_ID ){
+														
+														if($productrow->product_Ctg  == $ctgrow->pCtg_ID ){
+														
 												?>
-														<li> <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>"><?php echo $productrow->product_Name;?></a> </li> 
+														<li> <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>" style="color:#000;"><?php echo $productrow->product_Name;?></a> </li> 
 												<?php }
 												}
 													}else{
 													?>
 													 <li><img src="<?php echo base_url(); ?>html/web/comingsoon.jpg" class="img-responsive" />  </li> 
 													<?php } ?>
-											</ul>
-										</li>  
-									<?php  
-													}
-												}
-										}
-												else{
-													?>
-													<a href="#"><?php echo $ctgrow->pCtg_Name;?></a> <img src="<?php echo base_url(); ?>html/web/comingsoon.jpg" class="img-responsive" /> 
-												<?php }
-													
-												
-																								
-											
-									?>
+													</ul>
+										</li>
 									</ul>
 								</li>
 									<?php } ?>
@@ -283,6 +259,7 @@
 							  <ul class="nav navbar-nav">
 							  <li><a href="<?php echo base_url();?>upload/prescription">Upload Prescription</a></li>
 								<li><a href="<?php echo base_url();?>about/about">About Us</a></li>
+								<li><a href="<?php echo base_url();?>reviews/reviews">Reviews</a></li>
 								<li><a href="<?php echo base_url();?>faq/faq">FAQ</a></li>
 								<li><a href="<?php echo base_url();?>disclaimer/disclaimer">Disclaimer</a></li>
 							   

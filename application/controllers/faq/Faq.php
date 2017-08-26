@@ -23,7 +23,6 @@ class Faq extends CI_Controller {
 	{
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('faq/index',$data);

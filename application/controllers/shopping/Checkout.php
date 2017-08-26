@@ -26,7 +26,6 @@ class Checkout extends CI_Controller {
 			redirect('login/login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		$data['customer'] = $this->Customers_Model->getCustomer($this->session->userdata['front_logged_in']['front_id']);
 		
@@ -39,7 +38,6 @@ class Checkout extends CI_Controller {
 			redirect('login/login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->load->view('checkout/success',$data);
@@ -52,7 +50,6 @@ class Checkout extends CI_Controller {
 			redirect('login/login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
-		$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 		$data['products'] = $this->Product_Model->listWebProducts();
 		$data['customer'] = $this->Customers_Model->getCustomer($this->session->userdata['front_logged_in']['front_id']);
 		

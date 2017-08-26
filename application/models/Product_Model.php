@@ -79,118 +79,11 @@ Class Product_Model extends CI_Model {
 			return false;
 		
 	}
-	
-	// insert a product subcategory
-	public function addProductSubCategory($data) {
-
-		
-		$category = $this->db->escape($data['pSCtg_Name']);
-		$parentcategory = $this->db->escape($data['pSCtg_Category']);
-		$status = $data['pSCtg_Status'];
-		$sql = "INSERT INTO productsubcategory (pSCtg_Name,pSCtg_Category,pSCtg_Status) VALUES (".$category.",".$parentcategory.",".$status.")";
-		
-			$this->db->query($sql);
-			if ($this->db->affected_rows() > 0) {
-				return true;
-				}
-		 else {
-			return false;
-		}
-	}
-	
-	public function listProductSubCategory() {
-
-		
-		$this->db->select('*');
-		$this->db->from('productsubcategory');
-		$this->db->join('productcategory','productcategory.pCtg_ID = productsubcategory.pSCtg_Category');
-		$query = $this->db->get();
-		$data=array();
-		$data['result']=$query->result();
-		$data['records']=$query->num_rows();
-		return $data;
-		
-	}
-	public function listProductSubCategoryWeb() {
-
-		
-		$this->db->select('*');
-		$this->db->from('productsubcategory');
-		$this->db->join('productcategory','productcategory.pCtg_ID = productsubcategory.pSCtg_Category');
-		$this->db->where('productsubcategory.pSCtg_Status',1);
-		$query = $this->db->get();
-		$data=array();
-		$data['result']=$query->result();
-		$data['records']=$query->num_rows();
-		return $data;
-		
-	}
-	public function listSubCategoryByCatg($id) {
-
-		
-		$this->db->select('*');
-		$this->db->from('productsubcategory');
-		$this->db->join('productcategory','productsubcategory.pSCtg_Category = productcategory.pCtg_ID');
-		$this->db->where('productsubcategory.pSCtg_Category',$id);
-		$query = $this->db->get();
-		$data=array();
-		$data['result']=$query->result();
-		$data['records']=$query->num_rows();
-		return $data;
-		
-	}
-	public function listWebProductSubCategory($id) {
-
-		
-		$this->db->select('*');
-		$this->db->from('productsubcategory');
-		$this->db->join('productcategory','productsubcategory.pSCtg_Category = productcategory.pCtg_ID');
-		$this->db->where('productsubcategory.pSCtg_Status',1);
-		$this->db->where('productsubcategory.pSCtg_Category',$id);
-		$query = $this->db->get();
-		$data=array();
-		$data=$query->result();
-		return $data;
-		
-	}
-	public function deleteProductSubCategory($id) {
-
-		
-		$this->db->where('pSCtg_ID', $id);
-		$this->db->delete('productsubcategory');
-		if ($this->db->affected_rows() > 0) {
-				return true;
-				}
-				return false;
-		
-	}
-	public function getProductSubCategory($id)
-	{			$query=$this->db->query("SELECT * FROM productsubcategory   WHERE pSCtg_ID = ".$id);
-				return $query->result_array();
-	}
-	public function updateProductSubCategory($id,$data)
-	{			
-		$category = $this->db->escape($data['pSCtg_Name']);
-		$parentcategory = $data['pSCtg_Category'];
-		$status = $data['pSCtg_Status'];
-		$sql = "UPDATE productsubcategory SET pSCtg_Name = ".$category." , pSCtg_Category = ".$parentcategory." , pSCtg_Status = ".$status." WHERE pSCtg_ID = $id";
-		
-			$this->db->query($sql);
-			if ($this->db->affected_rows() > 0) {
-				return true;
-				}
-		
-			return false;
-		
-	}
-	
-	
 	public function listProducts() {
 
 		
 		$this->db->select('*');
 		$this->db->from('products');
-		/*$this->db->join('productsubcategory','productsubcategory.pSCtg_Category = products.product_SubCtg');*/
 		$this->db->join('productcategory','productcategory.pCtg_ID = products.product_Ctg');
 		$query = $this->db->get();
 		$data=array();

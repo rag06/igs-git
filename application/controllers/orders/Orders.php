@@ -26,7 +26,6 @@ class Orders extends CI_Controller {
 		}
 		
 			$data['category'] = $this->Product_Model->listWebProductCategory();
-			$data['subcategory'] = $this->Product_Model->listProductSubCategoryWeb();
 			$data['products'] = $this->Product_Model->listWebProducts();
 			$data['orders'] = $this->Orders_Model->listOrdersWeb($this->session->userdata['front_logged_in']['front_id']);
 			$data['orderitems'] = $this->Orders_Model->listOrdersDetailsWeb();
