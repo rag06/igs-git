@@ -27,8 +27,8 @@
 					<td><?php echo $cartrow['options']['pkg_Qauntity'];?> PILLS</td>
 					<td><?php echo $cartrow['options']['pkg_Strength'];?></td>
 					<td><?php echo $cartrow['qty'];?></td>
-					<td><?php echo $cartrow['price'];?></td>
-					<td><?php echo ($cartrow['qty']*$cartrow['price']);?></td>
+					<td>$ <?php echo $cartrow['price'];?></td>
+					<td>$ <?php echo ($cartrow['qty']*$cartrow['price']);?></td>
 					<td></td>
 		</tr>
 					
@@ -55,7 +55,7 @@
                                     Subtotal:
                                 </td>
                                 <td>
-                                    &#8377;
+                                    $ 
                                     <span ><?php echo $this->cart->total();?></span>
                                 </td>
                             </tr>

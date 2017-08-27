@@ -41,7 +41,7 @@ class Products extends CI_Controller {
 	public function insertProduct()
 	{
 				$data = array(
-				'product_Name' => $this->input->post('name'),
+				'product_Name' => htmlentities($this->input->post('name')),
 				'product_Strength' => $this->input->post('strength'),
 				'product_BrandName' => $this->input->post('brand'),
 				'product_unitPrice' => $this->input->post('price'),
@@ -74,7 +74,7 @@ class Products extends CI_Controller {
 	{
 				$data = array(
 				'product_ID' => $this->input->post('pId'),
-				'product_Name' => $this->input->post('name'),
+				'product_Name' => htmlentities($this->input->post('name')),
 				'product_Strength' => $this->input->post('strength'),
 				'product_BrandName' => $this->input->post('brand'),
 				'product_unitPrice' => $this->input->post('price'),
@@ -141,7 +141,7 @@ class Products extends CI_Controller {
 		
 		} else {
 				$data = array(
-				'pCtg_Name' => $this->input->post('category'),
+				'pCtg_Name' => htmlentities($this->input->post('category')),
 				'pCtg_Status' => $this->input->post('status')
 				);
 				
@@ -175,7 +175,7 @@ class Products extends CI_Controller {
 	public function updateProductCategory() {
 				$id =$this->input->post('editCategoryId');
 				$data = array(
-				'pCtg_Name' => $this->input->post('editCategoryName'),
+				'pCtg_Name' => htmlentities($this->input->post('editCategoryName')),
 				'pCtg_Status' => $this->input->post('editStatus')
 				);
 				

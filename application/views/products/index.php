@@ -27,7 +27,7 @@
                                                                 <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>">
                                                                     <?php echo $productrow->product_Name; ?> <?php echo $productrow->product_Strength; ?> </a></h4>
                                                             <p><span> <?php echo $productrow->product_BrandName; ?> <?php echo $productrow->product_Strength; ?> </span></p>
-                                                            <h5>&#8377;<?php echo $productrow->product_unitPrice; ?></h5>
+                                                            <h5>$ <?php echo $productrow->product_unitPrice; ?></h5>
                                                            
                                                         </div>
                                                     </div>

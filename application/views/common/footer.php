@@ -34,7 +34,7 @@
                 <div class="footer-info w3-agileits-info">
                     <div class="col-md-4">
                         <div class="footer-logo header-logo">
-                            <img src="<?php echo base_url(); ?>html/web/images/logo1.png" class="img-responsive" />
+                            <img src="<?php echo base_url(); ?>html/web/images/logo1.png" class="img-responsive" style="max-width:70%"/>
                         </div>
                     </div>
                     <!--<div class="col-md-8 ">-->
@@ -68,11 +68,6 @@
             </div>
         </div>
         <!-- //footer -->
-        <!--<div class="copy-right"> 
-		<div class="container">
-			<p>© 2016 Smart bazaar . All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
-		</div>
-	</div>-->
         <!-- cart-js -->
         
         <script>

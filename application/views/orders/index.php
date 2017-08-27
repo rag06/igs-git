@@ -37,7 +37,7 @@
 													</tr>
 													<tr>
 														<td>Amount </td>
-														<td><?php echo $orderrow->order_Amount;?></td>
+														<td>$ <?php echo $orderrow->order_Amount;?></td>
 													</tr>
 													<tr>
 														<td>Address </td>
@@ -73,8 +73,8 @@
 														<td><?php echo $itemsrow->odetail_Packing;?></td>
 														<td><?php echo $itemsrow->odetail_Strength;?></td>
 														<td><?php echo $itemsrow->odetail_Qauntity;?></td>
-														<td><?php echo $itemsrow->odetail_Price;?></td>
-														<td><?php echo ( $itemsrow->odetail_Qauntity * $itemsrow->odetail_Price);?></td>
+														<td>$ <?php echo $itemsrow->odetail_Price;?></td>
+														<td>$ <?php echo ( $itemsrow->odetail_Qauntity * $itemsrow->odetail_Price);?></td>
 														<td><?php if($itemsrow->odetail_Delivered) echo 'Delivered'; else echo 'arriving soon';?></td>
 													</tr>
 														

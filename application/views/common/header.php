@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>
-	The Pharma USA
+	Global Access Pharmacy
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="keywords" content="The Pharma USA" />
 <link href="<?php echo base_url(); ?>html/web/MCSS/Copies.css" rel="stylesheet" type="text/css" />

@@ -4,15 +4,6 @@
             data-interval="4000" data-pause="hover">
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="<?php echo base_url(); ?>html/web/images/3.jpg" alt="" class="img-responsive" />
-                    <div class="carousel-caption kb_caption kb_caption_center">
-                        <h3 data-animation="animated bounceInUp">
-                            Get Most of your sexual Life</h3>
-                        <h4 data-animation="animated bounceInDown">
-                            Buy Generic Viagra @$0.46 per pill</h4>
-                    </div>
-                </div>
-                <div class="item">
                     <img src="<?php echo base_url(); ?>html/web/images/slid6.jpg" alt="" class="img-responsive" />
                     <div class="carousel-caption kb_caption kb_caption_center">
                         <h3 data-animation="animated fadeInLeft">
@@ -98,7 +89,7 @@
                                                                 <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>">
                                                                     <?php echo $productrow->product_Name; ?> <?php echo $productrow->product_Strength; ?> </a></h4>
                                                             <p><span> <?php echo $productrow->product_BrandName; ?> <?php echo $productrow->product_Strength; ?> </span></p>
-                                                            <h5>&#8377;<?php echo $productrow->product_unitPrice; ?></h5>
+                                                            <h5>$ <?php echo $productrow->product_unitPrice; ?></h5>
                                                            
                                                         </div>
                                                     </div>

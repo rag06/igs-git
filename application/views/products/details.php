@@ -88,10 +88,10 @@ foreach($category as $catrow){
 												<span ><?php echo $packrow['pkg_Strength'];?></span>
 											</td>
 											<td>
-												<span><?php echo '&#8377;'.$packrow['pkg_Price'];?></span>
+												<span><?php echo '$ '.$packrow['pkg_Price'];?></span>
 											</td>
 											<td>
-												<span><?php echo '&#8377;'.$packrow['pkg_UnitPrice'];?></span>
+												<span><?php echo '$ '.$packrow['pkg_UnitPrice'];?></span>
 											</td>
 											<td>
 												<?php if(!empty($packrow['pkg_ShipInfo'])) {?>

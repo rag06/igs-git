@@ -5,25 +5,15 @@ Class Product_Model extends CI_Model {
 	// insert a product category
 	public function addProductCategory($data) {
 
-		$condition = "pCtg_Name =" . "'" . $data['pCtg_Name'] . "'";
-		$this->db->select('*');
-		$this->db->from('productcategory');
-		$this->db->where($condition);
-		$this->db->limit(1);
-		$query = $this->db->get();
-		
+	
 		$category = $this->db->escape($data['pCtg_Name']);
 		$status = $data['pCtg_Status'];
 		$sql = "INSERT INTO productcategory (pCtg_Name,pCtg_Status) VALUES (".$category.",".$status.")";
-		
-		if ($query->num_rows() == 0) {
 			$this->db->query($sql);
 			if ($this->db->affected_rows() > 0) {
 				return true;
 				}
-		} else {
-			return false;
-		}
+		
 	}
 	
 		public function listProductCategory() {
