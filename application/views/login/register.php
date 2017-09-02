@@ -36,7 +36,7 @@
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <label>Last Name</label>
-                                    <input name="lastname" type="text" id="lastname" class="form-control" placeholder="Your Lastname" title="Your Last Name" required />
+                                    <input name="lastname" type="text" id="lastname" class="form-control" placeholder="Your Lastname" title="Your Last Name"  />
                                 </div>
                                 <!-- End .from-group -->
                             </div>
@@ -92,8 +92,14 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label> Country</label>
-                                            <input name="country" type="text" id="ContentPlaceHolder1_TxtPin" class="form-control" placeholder="Country" title="Country" />
-                                          
+											<select name="country" id="country" class="form-control">
+												<option value="">Select</option>
+												<?php foreach($country['result'] as $countryrow){
+													echo '<option value="'.$countryrow->country_Name.'">'.$countryrow->country_Name.'</option>';
+													
+												}?>
+
+											</select>
                                         </div>
                                         <!-- End .from-group -->
                                     </div>
@@ -108,7 +114,7 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>Pin /Zip Code</label>
-                                            <input name="pincode" type="text" id="pincode" class="form-control" placeholder="pincode" title="pincode" required />
+                                            <input name="pincode" type="text" id="pincode" class="form-control" placeholder="pincode" title="pincode"  />
                                         </div>
                                         <!-- End .from-group -->
                                     </div>
@@ -119,7 +125,7 @@
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input name="password" type="password" id="password" class="form-control" placeholder="Password" title="Password" />
+                                    <input name="password" type="password" id="password" class="form-control" placeholder="Password" title="Password" required/>
                                     <span id="ContentPlaceHolder1_RequiredFieldValidator9" class="alert alert-danger" style="display:none;">Please Enter Password</span>
                                 </div>
                                 <!-- End .from-group -->

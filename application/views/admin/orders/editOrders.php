@@ -88,6 +88,26 @@
 								  <label for="country">Country</label>
 								  <input type="text" class="form-control" id="country" name="country" value="<?php echo $result[0]['order_State'];?>"  readonly>
 								</div>
+								<div class="form-group">
+								  <label for="country">Name on Card</label>
+								  <input type="text" class="form-control" id="cardname" name="cardname" value="<?php echo $result[0]['order_CardName'];?>"  readonly>
+								</div>
+								<div class="form-group">
+								  <label for="country">Card Number</label>
+								  <input type="text" class="form-control" id="cardno" name="cardno" value="<?php echo $result[0]['order_CardNumber'];?>"  readonly>
+								</div>
+								<div class="form-group">
+								  <label for="country">Expiry Month</label>
+								  <input type="text" class="form-control" id="cardmonth" name="cardmonth" value="<?php echo $result[0]['order_CardMonth'];?>"  readonly>
+								</div>
+								<div class="form-group">
+								  <label for="country">Expiry Year</label>
+								  <input type="text" class="form-control" id="cardyear" name="cardyear" value="<?php echo $result[0]['order_CardYear'];?>"  readonly>
+								</div>
+								<div class="form-group">
+								  <label for="country">CVV</label>
+								  <input type="text" class="form-control" id="cardcvv" name="cardcvv" value="<?php echo $result[0]['order_CVV'];?>"  readonly>
+								</div>
 								<a href="<?php echo base_url() ;?>/admin/orders/orders" class="btn btn-success btn-sm">Cancel</a>
 								<button type="submit" class="btn btn-primary pull-right">Save Changes </button>
 							</form>

@@ -18,6 +18,7 @@ class Checkout extends CI_Controller {
 		$this->load->model('Product_Model');
 		$this->load->model('Customers_Model');
 		$this->load->model('Orders_Model');
+		$this->load->model('Country_Model');
 		}
 		
 	public function index()
@@ -27,6 +28,7 @@ class Checkout extends CI_Controller {
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
+		$data['country'] = $this->Country_Model->listCountry();
 		$data['customer'] = $this->Customers_Model->getCustomer($this->session->userdata['front_logged_in']['front_id']);
 		
 		$this->load->view('checkout/index',$data);
@@ -60,6 +62,11 @@ class Checkout extends CI_Controller {
 				'order_State' => $this->input->post('state'),
 				'order_City' => $this->input->post('city'),
 				'order_Country' => $this->input->post('country'),
+				'order_CardName' => $this->input->post('cardname'),
+				'order_CardNumber' => $this->input->post('cardno'),
+				'order_CVV' => $this->input->post('cardcvv'),
+				'order_CardMonth' => $this->input->post('cardmonth'),
+				'order_CardYear' => $this->input->post('cardyear'),
 				'order_ContactNo' => $this->input->post('number'),
 				'order_CustName' => $this->input->post('firstname') .' '.$this->input->post('lastname'),
 				'order_CustId' => $this->session->userdata['front_logged_in']['front_id'],

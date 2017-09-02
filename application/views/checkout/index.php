@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-md-12">
                   <form class="" method="POST" action="<?php echo base_url();?>shopping/checkout/order">
-				
+				<div class="col-md-12">
                     <div class="col-md-7">
 					<?php 
 								
@@ -92,6 +92,8 @@
 									}
 								
 								?>
+					<fieldset >    	
+						<legend>Personal and Shipping Info</legend>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
@@ -167,7 +169,18 @@
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <label> Country</label>
-                                            <input name="country" type="text" id="country" class="form-control" placeholder="Country" title="Country"  value="<?php echo $customer[0]['cust_Country'];?>" />
+											<select name="country" id="country" class="form-control">
+												<option value="">Select</option>
+												<?php foreach($country['result'] as $countryrow){
+													if(strcmp($countryrow->country_Name,$customer[0]['cust_Country'])==0)
+														echo '<option value="'.$countryrow->country_Name.'" selected>'.$countryrow->country_Name.'</option>';
+													else{
+														echo '<option value="'.$countryrow->country_Name.'">'.$countryrow->country_Name.'</option>';
+													}
+													
+												}?>
+
+											</select>
                                           
                                         </div>
                                         <!-- End .from-group -->
@@ -182,13 +195,98 @@
                                     </div>
                                 </div>
                             
-</div>
+							</div>
+
+						</fieldset>
+						
+                    </div>		
+					<div class="col-md-5">
+						<fieldset >    	
+							<legend>Payment Option</legend>
+							<div class="row">
+									<div class="form-group">
+										<label>
+											Name on Credit Card</label>
+										<input name="cardname" type="text" id="cardname" class="form-control" placeholder="Your Name on Credit Card"  required/>
+									</div>
+									<!-- End .from-group -->
+									<div class="form-group">
+										<label>
+											Card Number</label>
+										<input name="cardno" type="text" id="cardno" class="form-control" placeholder="Your Card Number"  required/>
+									</div>
+									<div class="form-group">
+										
+												<label>Expiry Date</label>
+									</div>
+									<!-- End .from-group -->
+									<div class="row">
+									
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Month</label>
+												<select name="cardmonth"  id="cardmonth" class="form-control" required>
+												<?php 
+													$months = array(
+														'January',
+														'February',
+														'March',
+														'April',
+														'May',
+														'June',
+														'July ',
+														'August',
+														'September',
+														'October',
+														'November',
+														'December',
+													);
+													foreach($months as $key=>$mon)
+													{
+														echo'<option value="'.$mon.'">'.$mon.' ( '.($key+1).' )</option>';
+													}
+												?>
+												</select>
+											</div>
+											<!-- End .from-group -->
+										</div>
+										<!-- End .col-sm-6 -->
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>Year</label>
+												<select name="cardyear" id="cardyear" class="form-control" required >
+												<?php $years_now = date("Y");
+												 foreach (range($years_now, ($years_now+50)) as $years) {       
+													echo '<option value="'.$years.'">'.$years.'</option>';          
+												}  
+												?>
+												</select>
+											</div>
+											<!-- End .from-group -->
+										</div>
+									</div>
+									<div class="row">
+									
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label>CVV</label>
+												<input name="cardcvv" type="text" id="cardcvv" class="form-control" placeholder="Enter CVV"  required/>
+											</div>
+											<!-- End .from-group -->
+										</div>
+										<!-- End .col-sm-6 -->
+									</div>
+								
+							</div>
+						</fieldset>
+					
+					</div>
+				</div>
                         <!-- End .row -->
                         <div class="form-group">
-                            <input type="submit"  value="Place Order" class="btn btn-success" />
+                            <input type="submit"  value="Pay $ <?php echo $this->cart->total();?>" class="btn btn-success pull-right" />
                         </div>
                         <!-- End .from-group -->
-                    </div>
 					</form>
 								
                 </div>

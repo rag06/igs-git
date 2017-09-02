@@ -16,10 +16,10 @@ class Login extends CI_Controller {
 
 		// Load database
 		$this->load->model('Webpage_Model');
-		$this->load->model('Webpage_Model');
 		$this->load->model('WebUser_Model');
 		$this->load->model('Product_Model');
 		$this->load->model('Customers_Model');
+		$this->load->model('Country_Model');
 		}
 		
 	public function index()
@@ -155,6 +155,7 @@ class Login extends CI_Controller {
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
+		$data['country'] = $this->Country_Model->listCountry();
 		
 		$this->load->view('login/register',$data);
 	}
@@ -166,14 +167,10 @@ class Login extends CI_Controller {
 		$data['products'] = $this->Product_Model->listWebProducts();
 		
 		$this->form_validation->set_rules('firstname', 'First Name', 'trim|required');
-		$this->form_validation->set_rules('lastname', 'Last Name', 'trim|required');
 		$this->form_validation->set_rules('email', 'email', 'trim|required|valid_email');
 		$this->form_validation->set_rules('password', 'password', 'trim|required');
-		$this->form_validation->set_rules('password_conf', 'password', 'trim|required|matches[password]');
+		$this->form_validation->set_rules('password_conf', 'Confirm password', 'trim|required|matches[password]');
 		$this->form_validation->set_rules('number', 'Mobile Number', 'trim|required');
-		$this->form_validation->set_rules('area', 'Address', 'trim|required');
-		$this->form_validation->set_rules('pincode', 'Pincode', 'trim|required|min_length[6]|max_length[6]');
-		$this->form_validation->set_rules('sex', 'Gender', 'trim|required');
 		
 		
 		if ($this->form_validation->run() == FALSE) {

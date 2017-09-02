@@ -59,6 +59,26 @@
 														<td>Pincode </td>
 														<td><?php echo $orderrow->order_Pincode;?></td>
 													</tr>
+													<tr>
+														<td>Name on Card </td>
+														<td><?php echo $orderrow->order_CardName?></td>
+													</tr>
+													<tr>
+														<td>Card Number </td>
+														<td><?php echo $orderrow->order_CardNumber?></td>
+													</tr>
+													<tr>
+														<td>Expiry Month </td>
+														<td><?php echo $orderrow->order_CardMonth?></td>
+													</tr>
+													<tr>
+														<td>Expiry Year </td>
+														<td><?php echo $orderrow->order_CardYear?></td>
+													</tr>
+													<tr>
+														<td>CVV  </td>
+														<td><?php echo $orderrow->order_CVV?></td>
+													</tr>
 											   </table>
 											   	<table class="table table-striped table-bordered table-responsive img-responsive table-hover" cellspacing="0" rules="all" border="1" style="border-collapse:collapse;width: 100%">
 												<tr>
