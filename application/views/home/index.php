@@ -70,10 +70,11 @@
                             <div class="tabcontent-grids clearfix">
                                 <div >
                                     <?php
+									$i=0;
                                           foreach($products['result'] as $productrow){
 														if($productrow->product_Featured  == 1){
 												?>
-                                                <div class="item col-md-4" style="margin-bottom:25px;">
+                                                <div class="item col-md-3" style="margin-bottom:25px;">
                                                     <div class="glry-w3agile-grids agileits">
                                                         <div class="new-tag">
                                                             <h6>
