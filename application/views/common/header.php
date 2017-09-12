@@ -129,7 +129,13 @@
                     <ul>
                         <li class="dropdown head-dpdn"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user" aria-hidden="true"></i>
-                            <span id="LblUser">My Account</span><span class="caret"></span></a>
+                            <span id="LblUser">
+							<?php if(!isset($this->session->userdata['front_logged_in']) ||empty($this->session->userdata['front_logged_in']['front_name'])){?>
+							My Account
+							<?php } else{
+								echo 'Hi '.$this->session->userdata['front_logged_in']['front_name'].' ';
+							}?>							
+							</span><span class="caret"></span></a>
                             <ul class="dropdown-menu">
 								<?php if(!isset($this->session->userdata['front_logged_in']) ||empty($this->session->userdata['front_logged_in']['front_name'])){?>
                                 <li ><a href="<?php echo base_url();?>login/login">Login </a></li>

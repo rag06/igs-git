@@ -111,7 +111,7 @@
         </div>
     </div>
     <!-- //welcome -->
-    <!-- add-products -->
+    <!-- add-products
     <div class="add-products">
         <div class="container">
             <div class="add-products-row">
