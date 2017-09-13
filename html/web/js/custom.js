@@ -38,4 +38,7 @@ $(function ($) {
         doAnimations($animatingElems);
     });
    
+   $('.menuDemocollapse').click(function(){
+	   $(this).find('i').toggleClass('fa-caret-down fa-caret-up');
+   });
 });

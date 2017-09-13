@@ -1,4 +1,14 @@
 <?php $this->load->view('common/header.php');?>
+<style>
+.kb_wrapper {
+    max-height: 400px;
+}
+.kb_caption {
+    width: 40%;
+    top: 10%;
+    text-align: left;
+}
+</style>
 	<div class="banner">
         <div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel"
             data-interval="4000" data-pause="hover">
@@ -74,7 +84,7 @@
                                           foreach($products['result'] as $productrow){
 														if($productrow->product_Featured  == 1){
 												?>
-                                                <div class="item col-md-3" style="margin-bottom:25px;">
+                                                <div class="item col-md-2" style="margin-bottom:25px;">
                                                     <div class="glry-w3agile-grids agileits">
                                                         <div class="new-tag">
                                                             <h6>
@@ -82,14 +92,14 @@
                                                         </div>
                                                         <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>">
                                                             
-                                                            <img  src="<?php echo $productrow->product_Image; ?>" style="max-height: 220px; max-width: 250px;height: 220px; width: 250px" />
+                                                            <img  src="<?php echo $productrow->product_Image; ?>" style="max-height: 220px; max-width: 250px; height: 150px" />
                                                            
                                                         </a>
                                                         <div class="view-caption agileits-w3layouts">
-                                                            <h4>
+                                                           
                                                                 <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>">
-                                                                    <?php echo $productrow->product_Name; ?> <?php echo $productrow->product_Strength; ?> </a></h4>
-                                                            <p><span> <?php echo $productrow->product_BrandName; ?> <?php echo $productrow->product_Strength; ?> </span></p>
+                                                                    <?php echo $productrow->product_Name; ?> </a>
+                                                            <p><span> <?php echo $productrow->product_BrandName; ?></span></p>
                                                             <h5>$ <?php echo $productrow->product_unitPrice; ?></h5>
                                                            
                                                         </div>

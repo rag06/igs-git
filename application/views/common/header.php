@@ -122,7 +122,9 @@
                 <!--header-one-->
                 <div class="w3ls-header-left">
                     <p>
-                        <a href="javascript:void(0)">Generic Viagra - Medication For Male Impotence Treatment </a>
+                        <a href="javascript:void(0)"><i class="fa fa-envelope" aria-hidden="true"></i> support@globalaccesspharmacy.com </a> 
+						<span style="font-size:20px;">|</span>
+                        <a href="javascript:void(0)"><i class="fa fa-mobile-phone" aria-hidden="true"></i> Toll Free +1 502 209 4459 </a>
                     </p>
                 </div>
                 <div class="w3ls-header-right">
@@ -157,9 +159,9 @@
 							<li><a href="#">Special Offers</a></li> 
 						</ul> 
 					</li>-->
-                        <li class="dropdown head-dpdn"><a href="#" class="dropdown-toggle"><i class="fa fa-mobile-phone"
+                      <!--  <li class="dropdown head-dpdn"><a href="#" class="dropdown-toggle"><i class="fa fa-mobile-phone"
                             aria-hidden="true"></i>Toll Free +1 502 209 5549</a> </li>
-                        <!--<li class="dropdown head-dpdn">
+                        <li class="dropdown head-dpdn">
 						<a href="#" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
 					</li>-->
                     </ul>
@@ -211,40 +213,40 @@
 							<a href="#0" class="cd-close">Close</a>
 							<ul class="cd-dropdown-content"> 
 								 <?php 
-								
+									$i=0;
 									foreach($category as $ctgrow){
-										 
-								 ?>
-								<li class="has-children">
-									<a href="#"><?php echo $ctgrow->pCtg_Name;?></a>
-									<ul class="cd-secondary-dropdown is-hidden">
-										<li class="go-back"><a href="#">Menu</a></li>
-										<li class="has-children">
-											<h4><?php echo $ctgrow->pCtg_Name;?></h4>
-											<ul>
-												<?php 
-												$tempproduct=[];
-													foreach($products['result'] as $tempproductrow){
-														if($tempproductrow->product_Ctg  == $ctgrow->pCtg_ID ){
-															array_push($tempproduct,$tempproductrow);
+										 $i++;
+										 $tempproduct=[];
+														foreach($products['result'] as $tempproductrow){
+															if($tempproductrow->product_Ctg  == $ctgrow->pCtg_ID ){
+																array_push($tempproduct,$tempproductrow);
+															}
 														}
-													}
-													if(sizeof($tempproduct)>0){
-													foreach($tempproduct as $productrow){
-														
-														if($productrow->product_Ctg  == $ctgrow->pCtg_ID ){
-														
-												?>
-														<li> <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>" style="color:#000;"><?php echo $productrow->product_Name;?></a> </li> 
-												<?php }
-												}
-													}else{
+								 ?>
+								<li >
+								<a href="#"  class="menuDemocollapse" data-toggle="collapse" data-target="#demo<?php echo $i;?>">
+										<?php echo $ctgrow->pCtg_Name;?> (<?php echo count($tempproduct)?>) 
+										<i class="fa fa-caret-down pull-right"  style="margin-top:10px" aria-hidden="true"></i>
+								</a>
+								<div id="demo<?php echo $i;?>" class="collapse">
+										<table  style="border:none;width:100%;background:#fff">
+											<?php 
+													
+														if(sizeof($tempproduct)>0){
+														foreach($tempproduct as $productrow){
+															
+															if($productrow->product_Ctg  == $ctgrow->pCtg_ID ){
+															
 													?>
-													 <li><img src="<?php echo base_url(); ?>html/web/comingsoon.jpg" class="img-responsive" />  </li> 
-													<?php } ?>
-													</ul>
-										</li>
-									</ul>
+															<tr><td style="border:none;width:100%;"> <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>" style="color:#872a92;"><?php echo $productrow->product_Name;?></a> </td></tr> 
+													<?php 	}
+															}
+														}else{?>
+															<tr><td style="border:none;width:100%;"> <a href="#"> Comming Soon</a> </td></tr> 
+														<?php }
+														?>								
+										</table>
+									</div>
 								</li>
 									<?php } ?>
 							</ul>
