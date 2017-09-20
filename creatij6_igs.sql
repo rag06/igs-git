@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 02, 2017 at 05:10 AM
+-- Generation Time: Sep 20, 2017 at 03:41 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.4.3
 
@@ -370,7 +370,7 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   `feedback_Status` tinyint(1) NOT NULL DEFAULT '0',
   `feedback_timeStamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`feedback_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -416,13 +416,14 @@ INSERT INTO `global_settings` (`Gbl_Id`, `Gbl_Name`, `Gbl_Title`, `Gbl_Email`, `
 CREATE TABLE IF NOT EXISTS `orders` (
   `order_ID` int(12) NOT NULL AUTO_INCREMENT,
   `order_Amount` varchar(100) NOT NULL,
-  `order_Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `order_Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `order_Status` int(12) NOT NULL DEFAULT '1',
   `order_Address` varchar(250) NOT NULL,
   `order_Pincode` varchar(100) NOT NULL,
   `order_City` varchar(250) DEFAULT NULL,
   `order_State` varchar(250) NOT NULL,
   `order_Country` varchar(250) NOT NULL,
+  `order_PaymentType` varchar(250) DEFAULT NULL,
   `order_CardName` varchar(250) DEFAULT NULL,
   `order_CardNumber` varchar(250) DEFAULT NULL,
   `order_CVV` varchar(50) DEFAULT NULL,
@@ -432,14 +433,15 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `order_CustId` int(12) NOT NULL,
   `order_CustName` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`order_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_ID`, `order_Amount`, `order_Date`, `order_Status`, `order_Address`, `order_Pincode`, `order_City`, `order_State`, `order_Country`, `order_CardName`, `order_CardNumber`, `order_CVV`, `order_CardMonth`, `order_CardYear`, `order_ContactNo`, `order_CustId`, `order_CustName`) VALUES
-(7, '61.2', '2017-09-02 05:03:18', 1, 'Mumbai', '400096', 'df', 'Maharashtra', 'India ', 'Rs', 'vj', '2', 'January', '2017', '9029371298', 4, 'Anurag Singh');
+INSERT INTO `orders` (`order_ID`, `order_Amount`, `order_Date`, `order_Status`, `order_Address`, `order_Pincode`, `order_City`, `order_State`, `order_Country`, `order_PaymentType`, `order_CardName`, `order_CardNumber`, `order_CVV`, `order_CardMonth`, `order_CardYear`, `order_ContactNo`, `order_CustId`, `order_CustName`) VALUES
+(7, '61.2', '2017-09-20 15:16:48', 1, 'Mumbai', '400096', 'df', 'Maharashtra', 'India ', 'Visa/Master/Amex', 'Rs', 'vj', '2', 'January', '2017', '9029371298', 4, 'Anurag Singh'),
+(9, '61.2', '2017-09-20 15:33:45', 1, 'Mumbai', '400096', '', 'Maharashtra', 'India ', 'Western Union/Money gram', '', '', '', 'January', '2017', '9029371298', 4, 'Anurag Singh');
 
 -- --------------------------------------------------------
 
@@ -489,14 +491,16 @@ CREATE TABLE IF NOT EXISTS `order_details` (
   `odetail_UnitPrice` decimal(10,2) NOT NULL,
   `odetail_ShipInfo` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`odetail_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `order_details`
 --
 
 INSERT INTO `order_details` (`odetail_ID`, `odetail_orderID`, `odetail_PID`, `odetail_Delivered`, `odetail_Packing`, `odetail_PBrand`, `odetail_PName`, `odetail_Qauntity`, `odetail_Strength`, `odetail_Price`, `odetail_UnitPrice`, `odetail_ShipInfo`) VALUES
-(5, 7, 5, 0, '90 pills', 'Generic Abilify', 'Abilify', '1', '15mg', '61.20', '0.68', '--');
+(5, 7, 5, 0, '90 pills', 'Generic Abilify', 'Abilify', '1', '15mg', '61.20', '0.68', '--'),
+(6, 8, 5, 0, '180 pills', 'Generic Abilify', 'Abilify', '1', '15mg', '121.00', '0.67', 'Free Shipping'),
+(7, 9, 5, 0, '90 pills', 'Generic Abilify', 'Abilify', '1', '15mg', '61.20', '0.68', '--');
 
 -- --------------------------------------------------------
 
@@ -663,7 +667,7 @@ CREATE TABLE IF NOT EXISTS `uploadattachement` (
   `upload_Date` datetime NOT NULL,
   `upload_Status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`upload_ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

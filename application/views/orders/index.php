@@ -60,6 +60,11 @@
 														<td><?php echo $orderrow->order_Pincode;?></td>
 													</tr>
 													<tr>
+														<td>Payment Type </td>
+														<td><?php echo $orderrow->order_PaymentType?></td>
+													</tr>
+													<?php if($orderrow->order_PaymentType == "Visa/Master/Amex"){?>
+													<tr>
 														<td>Name on Card </td>
 														<td><?php echo $orderrow->order_CardName?></td>
 													</tr>
@@ -79,6 +84,7 @@
 														<td>CVV  </td>
 														<td><?php echo $orderrow->order_CVV?></td>
 													</tr>
+													<?php } ?>
 											   </table>
 											   	<table class="table table-striped table-bordered table-responsive img-responsive table-hover" cellspacing="0" rules="all" border="1" style="border-collapse:collapse;width: 100%">
 												<tr>

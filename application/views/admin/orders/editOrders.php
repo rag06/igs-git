@@ -89,6 +89,12 @@
 								  <input type="text" class="form-control" id="country" name="country" value="<?php echo $result[0]['order_State'];?>"  readonly>
 								</div>
 								<div class="form-group">
+								  <label for="country">PaymentType</label>
+								  <input type="text" class="form-control" id="paymentType" name="paymentType" value="<?php echo $result[0]['order_PaymentType'];?>"  readonly>
+								</div>
+								<?php if( $result[0]['order_PaymentType'] == "Visa/Master/Amex"){?>
+								
+								<div class="form-group">
 								  <label for="country">Name on Card</label>
 								  <input type="text" class="form-control" id="cardname" name="cardname" value="<?php echo $result[0]['order_CardName'];?>"  readonly>
 								</div>
@@ -108,6 +114,7 @@
 								  <label for="country">CVV</label>
 								  <input type="text" class="form-control" id="cardcvv" name="cardcvv" value="<?php echo $result[0]['order_CVV'];?>"  readonly>
 								</div>
+								<?php }?>
 								<a href="<?php echo base_url() ;?>/admin/orders/orders" class="btn btn-success btn-sm">Cancel</a>
 								<button type="submit" class="btn btn-primary pull-right">Save Changes </button>
 							</form>

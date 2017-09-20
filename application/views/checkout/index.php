@@ -203,17 +203,25 @@
 					<div class="col-md-5">
 						<fieldset >    	
 							<legend>Payment Option</legend>
-							<div class="row">
+							<div class="">
+							<div class="form-group">
+										<label>Payment Type</label>
+										<select name="paymentType" id="paymentType" class="form-control" required>
+											<option value="Visa/Master/Amex">Visa/Master/Amex</option>
+											<option value="Western Union/Money gram">Western Union/Money gram</option>
+										</select>
+									</div>
+								<div class="paymentForm" id="debitForm" style="">
 									<div class="form-group">
 										<label>
 											Name on Credit Card</label>
-										<input name="cardname" type="text" id="cardname" class="form-control" placeholder="Your Name on Credit Card"  required/>
+										<input name="cardname" type="text" id="cardname" class="form-control" placeholder="Your Name on Credit Card"  />
 									</div>
 									<!-- End .from-group -->
 									<div class="form-group">
 										<label>
 											Card Number</label>
-										<input name="cardno" type="text" id="cardno" class="form-control" placeholder="Your Card Number"  required/>
+										<input name="cardno" type="text" id="cardno" class="form-control" placeholder="Your Card Number"  />
 									</div>
 									<div class="form-group">
 										
@@ -225,7 +233,7 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Month</label>
-												<select name="cardmonth"  id="cardmonth" class="form-control" required>
+												<select name="cardmonth"  id="cardmonth" class="form-control" >
 												<?php 
 													$months = array(
 														'January',
@@ -254,7 +262,7 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>Year</label>
-												<select name="cardyear" id="cardyear" class="form-control" required >
+												<select name="cardyear" id="cardyear" class="form-control"  >
 												<?php $years_now = date("Y");
 												 foreach (range($years_now, ($years_now+50)) as $years) {       
 													echo '<option value="'.$years.'">'.$years.'</option>';          
@@ -270,13 +278,24 @@
 										<div class="col-sm-6">
 											<div class="form-group">
 												<label>CVV</label>
-												<input name="cardcvv" type="text" id="cardcvv" class="form-control" placeholder="Enter CVV"  required/>
+												<input name="cardcvv" type="text" id="cardcvv" class="form-control" placeholder="Enter CVV"  />
 											</div>
 											<!-- End .from-group -->
 										</div>
 										<!-- End .col-sm-6 -->
 									</div>
 								
+								</div>
+								<div class="paymentForm" id="westernForm" style="display:none;">
+									<p><strong>Details :&nbsp;</strong></p>
+
+									<p><strong>Name of the Receiver:</strong> Varun Sonawane&nbsp;</p>
+
+									<p><strong>City:</strong> Mumbai</p>
+
+									<p><strong>Country:</strong> India.</p>
+									<p>Visit near by Local Western Union outlet or Money Gram outlet or visit <a href="http://www.westernunion.com" target="_blank">www.westernunion.com</a> to make payment online</p>
+								</div>
 							</div>
 						</fieldset>
 					
@@ -295,3 +314,17 @@
             <!-- End .row -->
         </div>
 <?php $this->load->view('common/footer.php');?>
+<script>
+$(document).ready(function(){
+	$('#paymentType').change(function(){
+		$('.paymentForm').hide();
+	if($(this).val() == 'Visa/Master/Amex')	{
+		$('#debitForm').show();
+	}
+	else{
+		$('#westernForm').show();
+	}
+});
+});
+
+</script>

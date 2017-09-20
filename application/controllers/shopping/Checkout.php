@@ -62,6 +62,7 @@ class Checkout extends CI_Controller {
 				'order_State' => $this->input->post('state'),
 				'order_City' => $this->input->post('city'),
 				'order_Country' => $this->input->post('country'),
+				'order_PaymentType' => $this->input->post('paymentType'),
 				'order_CardName' => $this->input->post('cardname'),
 				'order_CardNumber' => $this->input->post('cardno'),
 				'order_CVV' => $this->input->post('cardcvv'),
@@ -72,7 +73,6 @@ class Checkout extends CI_Controller {
 				'order_CustId' => $this->session->userdata['front_logged_in']['front_id'],
 				'order_Status' =>	1
 				);
-				
 				$result = $this->Orders_Model->createOrder($odata);
 				if($result){
 					$cart = $this->cart->contents();

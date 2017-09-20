@@ -224,7 +224,7 @@
 														}
 								 ?>
 								<li >
-								<a href="#"  class="menuDemocollapse" data-toggle="collapse" data-target="#demo<?php echo $i;?>">
+								<a href="javascript:void(0);"  class="menuDemocollapse" data-toggle="collapse" data-target="#demo<?php echo $i;?>">
 										<?php echo $ctgrow->pCtg_Name;?> (<?php echo count($tempproduct)?>) 
 										<i class="fa fa-caret-down pull-right"  style="margin-top:10px" aria-hidden="true"></i>
 								</a>
