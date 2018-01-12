@@ -44,6 +44,9 @@ class Products extends CI_Controller {
 				'product_Name' => htmlentities($this->input->post('name')),
 				'product_Strength' => $this->input->post('strength'),
 				'product_BrandName' => $this->input->post('brand'),
+				'product_Title' => $this->input->post('title'),
+				'product_MetaKeyword' => $this->input->post('keyword'),
+				'product_MetaDesc' => $this->input->post('metadesc'),
 				'product_unitPrice' => $this->input->post('price'),
 				'product_Image' => $this->input->post('images'),
 				'product_Ctg' =>  $this->input->post('category'),
@@ -75,6 +78,9 @@ class Products extends CI_Controller {
 				$data = array(
 				'product_ID' => $this->input->post('pId'),
 				'product_Name' => htmlentities($this->input->post('name')),
+				'product_Title' => $this->input->post('title'),
+				'product_MetaKeyword' => $this->input->post('keyword'),
+				'product_MetaDesc' => $this->input->post('metadesc'),
 				'product_Strength' => $this->input->post('strength'),
 				'product_BrandName' => $this->input->post('brand'),
 				'product_unitPrice' => $this->input->post('price'),
@@ -90,9 +96,10 @@ class Products extends CI_Controller {
 				'product_Status' =>$this->input->post('status'),
 				'product_Featured' => $this->input->post('feature')
 				);
+				
 				$result = $this->Product_Model->updateProduct($data);
 				
-					redirect('admin/products/products');
+				redirect('admin/products/products');
 				
 				
 		
@@ -117,6 +124,7 @@ class Products extends CI_Controller {
 					if(!isset($this->session->userdata['logged_in'])){
 							redirect('admin/login/index');
 						}
+	    ini_set('display_errors', 1);
 						$data['result'] = $this->Product_Model->getProduct($id);
 						$data['category'] = $this->Product_Model->listProductCategory();
 						$this->load->view('admin/products/editProduct', $data);

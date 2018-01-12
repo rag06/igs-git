@@ -729,7 +729,7 @@
     color: #fff;
   }
   .cd-dropdown-content > .has-children > a.is-active::before, .cd-dropdown-content > .has-children > a.is-active::after {
-    background: #fff;
+    background: #3e8f4b;
   }
   .open-to-left .cd-dropdown-content > .has-children > a.is-active {
     box-shadow: inset -2px 0 0 #fff;
@@ -889,7 +889,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
-    background: #fff;
+    background: #b3b3b3;
   }
 }
 

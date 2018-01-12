@@ -1,3 +1,15 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><?php echo $productdetails[0]['product_Title']; ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="<?php echo $productdetails[0]['product_MetaKeyword']; ?>" />
+<meta name="description" content="<?php echo $productdetails[0]['product_MetaDesc']; ?>" />
+<?php $this->load->view('common/common_css.php');?>
+</head>
+<body>
+ <div>
 <?php $this->load->view('common/header.php');?>
 <?php
 $catgname="NA";
@@ -27,7 +39,7 @@ foreach($category as $catrow){
                         <table class="table table-bordered" style="background-color:rgb(244, 218, 247);">
                             <tr>
                                 <td rowspan="4" style="width: 15%; text-align: center">
-                                    <img class="img-responsive" src="<?php echo $productdetails[0]['product_Image']; ?>" style="height: 120px;" />
+                                    <img class="img-responsive" alt="<?php echo $productdetails[0]['product_Name']; ?>"src="<?php echo $productdetails[0]['product_Image']; ?>" style="height: 120px;" />
                                 </td>
                                 <td style="width: 20%;">
                                     <b>Parent Category </b>

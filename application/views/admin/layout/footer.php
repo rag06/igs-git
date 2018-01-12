@@ -56,11 +56,14 @@
 	
 	<!-- blog category page-->
 	 <script>
+	 if($('#ckfinder1').length){
          CKFinder.widget( 'ckfinder1', {
              height: 600
          } );
+	 }
      </script>
 	<script>
+	 if($('#longcontent').length){
 	 CKEDITOR.replace( 'longcontent',
  {
      filebrowserBrowseUrl: '<?php echo base_url();?>html/asset/ckfinder/ckfinder.html',
@@ -68,6 +71,7 @@
      filebrowserUploadUrl: '<?php echo base_url();?>html/asset/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
      filebrowserImageUploadUrl: '<?php echo base_url();?>html/asset/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
  });
+	 }
 		function deleteBlogCategory( id){
 			$('#categoryId').val(id);
 			$("#deleteCategory").modal();
@@ -167,9 +171,13 @@
           "info": true,
           "autoWidth": true
         });
-		
+        if($('#shortcontent').length){
 		CKEDITOR.replace('shortcontent');
+        }
+        if($('#longcontent').length){
 		CKEDITOR.replace('longcontent');
+		
+        }
       });
 	</script>
 	<!-- admin manage page-->

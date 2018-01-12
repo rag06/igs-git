@@ -41,7 +41,7 @@
 								  <input type="text" class="form-control" id="name" name="name" value="<?php echo$result[0]['Wp_Name'];?>">
 								</div>
 								<div class="form-group">
-								  <label for="title">Web Page Name</label>
+								  <label for="title">Web Page Title</label>
 								  <input type="text" class="form-control" id="title" name="title" value="<?php echo$result[0]['Wp_Title'];?>">
 								</div>
 								<div class="form-group">

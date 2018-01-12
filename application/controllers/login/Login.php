@@ -67,12 +67,12 @@ class Login extends CI_Controller {
 			 $result=$this->WebUser_Model->checkEmail($info);
 			 $info=$this->WebUser_Model->getUserByEmail($info);
 			 if($result){
-						$from_email = "your@creativewebie.org"; 
+						$from_email = "no-reply@globalaccesspharmacy.com"; 
 						 $this->load->library('email'); 		$config['charset'] = 'utf-8';		$config['mailtype'] = 'html';
 						$this->email->initialize($config);
-						 $this->email->from($from_email, 'igssolution.in Account Password'); 
+						 $this->email->from($from_email, 'globalaccesspharmacy.com Account Password'); 
 						 $this->email->to($info[0]['cust_Email']);
-						 $this->email->subject('igssolution.in  Account Password'); 
+						 $this->email->subject('globalaccesspharmacy.com Account Password'); 
 						 $this->email->message('Dear '.$info[0]['cust_FName'].', <br/><br/>Kindly find the below password <br/><br/> <b>Password:</b> '.($info[0]['cust_Password'])); 
 				   
 								 //Send mail 

@@ -26,7 +26,7 @@
 						  <h3 class="box-title">Edit Product : <?php echo $result[0]['product_Name'];?></h3>
 						</div><!-- /.box-header -->
 						  <div class="box-body">
-							<form method="post" action="<?php echo base_url() ;?>/admin/products/products/updateProduct">
+							<form method="post" action="<?php echo base_url() ;?>admin/products/products/updateProduct"  enctype="multipart/form-data">
 								<input type="hidden" name="pId" value="<?php echo $result[0]['product_ID'];?>"/>
 								 <?php
 								echo "<div class='error_msg'>";
@@ -39,6 +39,18 @@
 								<div class="form-group">
 								  <label for="name">Product Name</label>
 								  <input type="text" class="form-control" id="name" name="name" placeholder="Enter Product name" value="<?php echo $result[0]['product_Name'];?>" required>
+								</div>
+								<div class="form-group">
+								  <label for="title">Product Title</label>
+								  <input type="text" class="form-control" id="title" name="title" placeholder="Enter Product Title"  value="<?php echo $result[0]['product_Title'];?>">
+								</div>
+								<div class="form-group">
+								  <label for="keyword">Product Meta Keyword</label>
+								  <input type="text" class="form-control" id="keyword" name="keyword" placeholder="Enter Product Meta  keyword"  value="<?php echo $result[0]['product_MetaKeyword'];?>">
+								</div>
+								<div class="form-group">
+								  <label for="metadesc">Product Meta Description</label>
+								  <input type="text" class="form-control" id="metadesc" name="metadesc" placeholder="Enter Product Meta Description"  value="<?php echo $result[0]['product_MetaDesc'];?>">
 								</div>
 								<div class="form-group">
 								  <label for="brand">Brand Name</label>
@@ -147,5 +159,4 @@
 		CKEDITOR.replace('dosage');
 		CKEDITOR.replace('precaution');
 		CKEDITOR.replace('sideEffects');
-		CKEDITOR.replace('warnings');
       </script>

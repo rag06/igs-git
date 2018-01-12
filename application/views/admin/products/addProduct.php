@@ -26,7 +26,7 @@
 						  <h3 class="box-title">Add New Product :</h3>
 						</div><!-- /.box-header -->
 						  <div class="box-body">
-							<form method="post" action="<?php echo base_url() ;?>/admin/products/products/insertProduct">
+							<form method="post" action="<?php echo base_url() ;?>admin/products/products/insertProduct">
 								 <?php
 								echo "<div class='error_msg'>";
 								if (isset($error_message)) {
@@ -38,6 +38,18 @@
 								<div class="form-group">
 								  <label for="name">Product Name</label>
 								  <input type="text" class="form-control" id="name" name="name" placeholder="Enter Product name" required>
+								</div>
+								<div class="form-group">
+								  <label for="title">Product Title</label>
+								  <input type="text" class="form-control" id="title" name="title" placeholder="Enter Product Title" >
+								</div>
+								<div class="form-group">
+								  <label for="keyword">Product Meta Keyword</label>
+								  <input type="text" class="form-control" id="keyword" name="keyword" placeholder="Enter Product Meta  keyword" >
+								</div>
+								<div class="form-group">
+								  <label for="metadesc">Product Meta Description</label>
+								  <input type="text" class="form-control" id="metadesc" name="metadesc" placeholder="Enter Product Meta Description" >
 								</div>
 								<div class="form-group">
 								  <label for="brand">Brand Name</label>
