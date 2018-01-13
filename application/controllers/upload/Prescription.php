@@ -23,7 +23,7 @@ class Prescription  extends CI_Controller {
 	public function index()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login');
+			redirect('login');
 		}
 		$data['uploads'] = $this->Customers_Model->getUploadsByUser($this->session->userdata['front_logged_in']['front_id']);
 		$data['category'] = $this->Product_Model->listWebProductCategory();

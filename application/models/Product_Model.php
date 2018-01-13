@@ -121,6 +121,10 @@ Class Product_Model extends CI_Model {
 	{			$query=$this->db->query("SELECT * FROM products   WHERE product_ID = $id");
 				return $query->result_array();
 	}
+	public function getProductByUrl($id)
+	{			$query=$this->db->query("SELECT * FROM products   WHERE product_Slug ='$id'");
+				return $query->result_array();
+	}
 	public function updateProduct($data)
 	{			
 		$this->db->where('product_ID', $data['product_ID']);

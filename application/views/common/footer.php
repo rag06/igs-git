@@ -43,9 +43,9 @@
                             Company</h3>
                         <ul>
                             <li><a href="<?php echo base_url();?>about/company">Company Profile</a></li>
-                            <li><a href="<?php echo base_url();?>about/about">About Us</a></li>
-                            <li><a href="<?php echo base_url();?>faq/faq">FAQ</a></li>
-                            <li><a href="<?php echo base_url();?>disclaimer/disclaimer">Disclaimer</a></li>
+                            <li><a href="<?php echo base_url();?>about">About Us</a></li>
+                            <li><a href="<?php echo base_url();?>faq">FAQ</a></li>
+                            <li><a href="<?php echo base_url();?>disclaimer">Disclaimer</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 footer-grids">

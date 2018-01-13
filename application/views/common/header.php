@@ -22,14 +22,14 @@
 							</span><span class="caret"></span></a>
                             <ul class="dropdown-menu">
 								<?php if(!isset($this->session->userdata['front_logged_in']) ||empty($this->session->userdata['front_logged_in']['front_name'])){?>
-                                <li ><a href="<?php echo base_url();?>login/login">Login </a></li>
-                                <li><a href="<?php echo base_url();?>login/login/register">Sign Up</a></li>
-                                <li><a href="<?php echo base_url();?>/shopping/cart">Cart </a></li>  
+                                <li ><a href="<?php echo base_url();?>login">Login </a></li>
+                                <li><a href="<?php echo base_url();?>login/register">Sign Up</a></li>
+                                <li><a href="<?php echo base_url();?>shopping/cart">Cart </a></li>  
 								<?php } else{ ?>                           
-                                <li><a href="<?php echo base_url();?>/orders/orders">My Orders</a></li>
-                               <li><a href="<?php echo base_url();?>login/login/changePassword">Change Password</a></li>
-                                <li><a href="<?php echo base_url();?>/shopping/cart">Cart </a></li>  
-                                <li><a href="<?php echo base_url();?>login/login/logout" id="Logout">Log Out</a></li>
+                                <li><a href="<?php echo base_url();?>orders">My Orders</a></li>
+                               <li><a href="<?php echo base_url();?>login/changePassword">Change Password</a></li>
+                                <li><a href="<?php echo base_url();?>shopping/cart">Cart </a></li>  
+                                <li><a href="<?php echo base_url();?>login/logout" id="Logout">Log Out</a></li>
 								<?php }?>
                             </ul>
                         </li>
@@ -59,7 +59,7 @@
                                 <img src="<?php echo base_url(); ?>html/web/images/logo1.png" class="img-responsive" /></a></h1>
                     </div>
                     <div class="header-search">
-                            <form class="navbar-form" role="search" name="cse" id="searchbox" action="<?php echo base_url();?>home/home/searchResults" method="get">
+                            <form class="navbar-form" role="search" name="cse" id="searchbox" action="<?php echo base_url();?>home/searchResults" method="get">
 								<div class="input-group">
 									<input name="q" id="q" type="search" placeholder="Search for a Product..." title="Search for a Product..." style="width: 290px;" />
 									<div class="input-group-btn">
@@ -73,7 +73,7 @@
                     </div>
                     <div class="header-cart">
                         <div class="">
-                            <a href="<?php echo base_url();?>/shopping/cart" class="btn btn-primary btn-circle btn-xl btn-circle"><i class="fa fa-cart-arrow-down"
+                            <a href="<?php echo base_url();?>shopping/cart" class="btn btn-primary btn-circle btn-xl btn-circle"><i class="fa fa-cart-arrow-down"
                                 aria-hidden="true"></i>
                                 <span id="LblCartCount"><?php $cart = $this->cart->contents(); echo sizeOf($cart);?></span>
                             </a>
@@ -120,7 +120,7 @@
 															if($productrow->product_Ctg  == $ctgrow->pCtg_ID ){
 															
 													?>
-															<tr><td style="border:none;width:100%;"> <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>" style="color:#872a92;"><?php echo $productrow->product_Name;?></a> </td></tr> 
+															<tr><td style="border:none;width:100%;"> <a href="<?php echo base_url();?>products/details/<?php echo $productrow->product_Slug; ?>" style="color:#872a92;"><?php echo $productrow->product_Name;?></a> </td></tr> 
 													<?php 	}
 															}
 														}else{?>
@@ -148,10 +148,10 @@
 							<div class="collapse navbar-collapse" id="myNavbar">
 							  <ul class="nav navbar-nav">
 							  <li><a href="<?php echo base_url();?>upload/prescription">Upload Prescription</a></li>
-								<li><a href="<?php echo base_url();?>about/about">About Us</a></li>
-								<li><a href="<?php echo base_url();?>reviews/reviews">Reviews</a></li>
-								<li><a href="<?php echo base_url();?>faq/faq">FAQ</a></li>
-								<li><a href="<?php echo base_url();?>disclaimer/disclaimer">Disclaimer</a></li>
+								<li><a href="<?php echo base_url();?>about">About Us</a></li>
+								<li><a href="<?php echo base_url();?>reviews">Reviews</a></li>
+								<li><a href="<?php echo base_url();?>faq">FAQ</a></li>
+								<li><a href="<?php echo base_url();?>disclaimer">Disclaimer</a></li>
 							   
 								<li><a href="<?php echo base_url();?>policy/shipping"> Shipping Policy</a></li>
 								

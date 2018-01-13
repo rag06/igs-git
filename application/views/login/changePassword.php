@@ -30,7 +30,7 @@
 											echo '<div class="text-success">'.$msg.'</div>';
 										}
 										?>
-					<form method="POST" action="<?php echo base_url();?>login/login/updatePassword">
+					<form method="POST" action="<?php echo base_url();?>login/updatePassword">
 						<div class="form-group">
 							<input name="password" type="password" id="password" class="form-control" placeholder="Enter New Password" title="Enter New Password" required/>
 						</div>

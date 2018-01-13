@@ -27,10 +27,11 @@ class Products extends CI_Controller {
 	}
 	public function details($id )
 	{
+		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
-		$data['productdetails'] = $this->Product_Model->getProduct($id);
-		$data['packinfo'] = $this->Product_Model->getInfoByProduct($id);
+		$data['productdetails'] = $this->Product_Model->getProductByUrl($id);
+		$data['packinfo'] = $this->Product_Model->getInfoByProduct($data['productdetails'][0]['product_ID']);
 		
 		$this->load->view('products/details',$data);
 	}

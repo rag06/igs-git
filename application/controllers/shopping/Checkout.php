@@ -24,7 +24,7 @@ class Checkout extends CI_Controller {
 	public function index()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login');
+			redirect('login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
@@ -37,7 +37,7 @@ class Checkout extends CI_Controller {
 	public function success()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login');
+			redirect('login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
@@ -49,7 +49,7 @@ class Checkout extends CI_Controller {
 	public function order()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login');
+			redirect('login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();

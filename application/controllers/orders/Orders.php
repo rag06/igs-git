@@ -22,7 +22,7 @@ class Orders extends CI_Controller {
 	public function index()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login');
+			redirect('login');
 		}
 		
 			$data['category'] = $this->Product_Model->listWebProductCategory();

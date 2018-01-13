@@ -16,7 +16,7 @@
          <div class="row">
                         <div class="col-sm-6 ">
                             <h2 class="mb30">Existing user login here</h2>
-								<form method="post" action="<?php echo base_url();?>login/login/check">
+								<form method="post" action="<?php echo base_url();?>login/check">
 								<?php
 									
 										echo '<div class="text-danger">'.validation_errors().'</div>';
@@ -40,7 +40,7 @@
  
                                  
 									<input type="submit" value="Login Now"  class="btn btn-success" />
-								<a href="<?php echo base_url();?>/login/login/forgotPassword" class="btn btn-primary">Forgot Password</a>       
+								<a href="<?php echo base_url();?>login/forgotPassword" class="btn btn-primary">Forgot Password</a>       
                            </form>
                                  
                            
@@ -56,7 +56,7 @@
                              
                             <div class="mb10"></div><!-- margin -->
 
-                            <a href="<?php echo base_url();?>login/login/register" class="btn btn-primary min-width">Register Now</a>
+                            <a href="<?php echo base_url();?>login/register" class="btn btn-primary min-width">Register Now</a>
                         </div><!-- End .col-sm-6 -->
                     </div><!-- End .row -->
         </div>

@@ -25,7 +25,7 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		if(isset($this->session->userdata['front_logged_in'])){
-			redirect('home/home/');
+			redirect('home');
 		}
 		$data['isregister']='N';
 		$data['category'] = $this->Product_Model->listWebProductCategory();
@@ -37,7 +37,7 @@ class Login extends CI_Controller {
 	public function forgotPassword()
 	{
 		if(isset($this->session->userdata['front_logged_in'])){
-			redirect('home/home/');
+			redirect('home');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
@@ -48,7 +48,7 @@ class Login extends CI_Controller {
 	{
 		
 		if(isset($this->session->userdata['front_logged_in'])){
-			redirect('home/home/');
+			redirect('home');
 		}
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();
@@ -101,7 +101,7 @@ class Login extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE) {
 			if(isset($this->session->userdata['front_logged_in'])){
-			redirect('home/home/');
+			redirect('home');
 		}else{
 			$this->load->view('login/index', $data);
 		}
@@ -125,7 +125,7 @@ class Login extends CI_Controller {
 		);
 		// Add user data in session
 		$this->session->set_userdata('front_logged_in', $session_data);
-			redirect('home/home/index');
+			redirect('home');
 		}
 		} else {
 			$data['error_message']='Invalid Username or Password ';
@@ -146,12 +146,12 @@ class Login extends CI_Controller {
 	);
 	$this->session->unset_userdata('front_logged_in', $sess_array);
 	$data['message_display'] = 'Successfully Logout';
-			redirect('home/home');
+			redirect('home');
 	}
 	public function register()
 	{
 		if(isset($this->session->userdata['front_logged_in'])){
-			redirect('home/home/');
+			redirect('home');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
@@ -215,7 +215,7 @@ class Login extends CI_Controller {
 	public function changePassword()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login/index');
+			redirect('login');
 		}
 		$data['category'] = $this->Product_Model->listWebProductCategory();
 		$data['products'] = $this->Product_Model->listWebProducts();
@@ -225,7 +225,7 @@ class Login extends CI_Controller {
 	public function updatePassword()
 	{
 		if(!isset($this->session->userdata['front_logged_in'])){
-			redirect('login/login/index');
+			redirect('login');
 		}
 		
 		$data['category'] = $this->Product_Model->listWebProductCategory();

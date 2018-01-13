@@ -35,7 +35,7 @@ class Reviews extends CI_Controller {
 				);
 				
 				$result = $this->Feedback_Model->addFeedback($data);
-				redirect('reviews/reviews');
+				redirect('reviews');
 	}		
 }
 

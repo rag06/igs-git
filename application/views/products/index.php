@@ -28,14 +28,14 @@
                                                             <h6>
                                                                 New</h6>
                                                         </div>
-                                                        <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>">
+                                                        <a href="<?php echo base_url();?>products/details/<?php echo $productrow->product_Slug; ?>">
                                                             
                                                             <img  src="<?php echo $productrow->product_Image; ?>" style="max-height: 220px; max-width: 250px;height: 220px; width: 250px" />
                                                            
                                                         </a>
                                                         <div class="view-caption agileits-w3layouts">
                                                             <h4>
-                                                                <a href="<?php echo base_url();?>products/products/details/<?php echo $productrow->product_ID; ?>/<?php echo $productrow->product_Name; ?>">
+                                                                <a href="<?php echo base_url();?>products/details/<?php echo $productrow->product_Slug; ?>">
                                                                     <?php echo $productrow->product_Name; ?> <?php echo $productrow->product_Strength; ?> </a></h4>
                                                             <p><span> <?php echo $productrow->product_BrandName; ?> <?php echo $productrow->product_Strength; ?> </span></p>
                                                             <h5>$ <?php echo $productrow->product_unitPrice; ?></h5>

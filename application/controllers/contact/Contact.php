@@ -38,7 +38,7 @@ class Contact extends CI_Controller {
 				$this->load->view('contact/index',$data);
 			
 			} else {
-         $from_email = "your@creativewebie.org"; 
+         $from_email = "no-reply@globalaccesspharmacy.com"; 
          $to_email = $this->input->post('email'); 
          $subject = $this->input->post('subject'); 
          $name = $this->input->post('name'); 
@@ -47,8 +47,7 @@ class Contact extends CI_Controller {
          //Load email library 
          $this->load->library('email'); 		$config['charset'] = 'utf-8';		$config['mailtype'] = 'html';
 		$this->email->initialize($config);
-         $this->email->from($from_email, 'Aamdanee Contact'); 
-     //    $this->email->to('talk2abhijit@gmail.com');
+         $this->email->from($from_email, 'global access pharmacy Contact'); 
          $this->email->to('singhanuragv@gmail.com');
          $this->email->subject($subject); 
          $this->email->message('Name : '.$name.'<br/> Email :'.$to_email.'<br/> Subject :'.$subject.'<br/> Message :'.$message); 

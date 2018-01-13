@@ -14,6 +14,7 @@ class Products extends CI_Controller {
 
 		// Load session library
 		$this->load->library('session');
+		$this->load->library('slugify');
 
 		// Load database
 		$this->load->model('Product_Model');
@@ -40,10 +41,14 @@ class Products extends CI_Controller {
 	}
 	public function insertProduct()
 	{
+				$urltext = $this->input->post('title').' '.$this->input->post('brand');
+				
+				$slug = $this->slugify->slug_unique($urltext, 'products', 'product_Slug');
 				$data = array(
 				'product_Name' => htmlentities($this->input->post('name')),
 				'product_Strength' => $this->input->post('strength'),
 				'product_BrandName' => $this->input->post('brand'),
+				'product_Slug' => $slug,
 				'product_Title' => $this->input->post('title'),
 				'product_MetaKeyword' => $this->input->post('keyword'),
 				'product_MetaDesc' => $this->input->post('metadesc'),
@@ -75,9 +80,14 @@ class Products extends CI_Controller {
 	}
 	public function updateProduct()
 	{
+				$urltext = $this->input->post('title').' '.$this->input->post('brand');
+				
+				$slug = $this->slugify->slug_unique($urltext, 'products', 'product_Slug');
+				
 				$data = array(
 				'product_ID' => $this->input->post('pId'),
 				'product_Name' => htmlentities($this->input->post('name')),
+				'product_Slug' => $slug,
 				'product_Title' => $this->input->post('title'),
 				'product_MetaKeyword' => $this->input->post('keyword'),
 				'product_MetaDesc' => $this->input->post('metadesc'),

@@ -18,7 +18,7 @@
             <div class="row">
                 
                 <div class="col-md-3 col-md-offset-3"></div>
-				<form class="" method="POST" action="<?php echo base_url();?>login/login/registercheck">
+				<form class="" method="POST" action="<?php echo base_url();?>login/registercheck">
 				
                     <div class="col-md-7">
 					<?php 
